@@ -1,0 +1,40 @@
+{
+  "id": "main_menu",
+  "items": [
+    {
+      "id": "home",
+      "name": "Inicio",
+      "url": "#section-home"
+    },
+    {
+      "id": "about",
+      "name": "¿Quiénes somos?",
+      "url": "#section-about"
+    },
+    {
+      "id": "do",
+      "name": "¿Qué hacemos?",
+      "url": "#section-about3"
+    },
+    {
+      "id": "services",
+      "name": "Servicios",
+      "url": "#section-about4"
+    },
+    {
+      "id": "cce",
+      "name": "CCE",
+      "url": "#section-about5"
+    },
+    {
+      "id": "clients",
+      "name": "Nuestros cliente",
+      "url": "#section-about6"
+    },
+    {
+      "id": "contact",
+      "name": "Contacto",
+      "url": "#section-about7"
+    }
+  ]
+}

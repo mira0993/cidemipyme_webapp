@@ -1,0 +1,111 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 01/03/2018 08:51
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-001-planning:before { content: "\f100"; }
+.flaticon-002-goal:before { content: "\f101"; }
+.flaticon-003-investment:before { content: "\f102"; }
+.flaticon-004-video-conference:before { content: "\f103"; }
+.flaticon-005-target:before { content: "\f104"; }
+.flaticon-006-strategy-1:before { content: "\f105"; }
+.flaticon-007-startup:before { content: "\f106"; }
+.flaticon-008-advertising:before { content: "\f107"; }
+.flaticon-009-heart:before { content: "\f108"; }
+.flaticon-010-website-1:before { content: "\f109"; }
+.flaticon-011-store:before { content: "\f10a"; }
+.flaticon-012-report:before { content: "\f10b"; }
+.flaticon-013-presentation:before { content: "\f10c"; }
+.flaticon-014-policy:before { content: "\f10d"; }
+.flaticon-015-strategy:before { content: "\f10e"; }
+.flaticon-016-speech:before { content: "\f10f"; }
+.flaticon-017-logistics:before { content: "\f110"; }
+.flaticon-018-balance:before { content: "\f111"; }
+.flaticon-019-leader:before { content: "\f112"; }
+.flaticon-020-idea:before { content: "\f113"; }
+.flaticon-021-human-resources:before { content: "\f114"; }
+.flaticon-022-global:before { content: "\f115"; }
+.flaticon-023-business:before { content: "\f116"; }
+.flaticon-024-programmer:before { content: "\f117"; }
+.flaticon-025-data:before { content: "\f118"; }
+.flaticon-026-customer-support-1:before { content: "\f119"; }
+.flaticon-027-creative:before { content: "\f11a"; }
+.flaticon-028-connection:before { content: "\f11b"; }
+.flaticon-029-visitor:before { content: "\f11c"; }
+.flaticon-030-website:before { content: "\f11d"; }
+.flaticon-031-customer-support:before { content: "\f11e"; }
+.flaticon-032-growth:before { content: "\f11f"; }
+.flaticon-033-deal:before { content: "\f120"; }
+.flaticon-034-building:before { content: "\f121"; }
+.flaticon-035-teamwork:before { content: "\f122"; }
+.flaticon-036-card:before { content: "\f123"; }
+    
+    $font-Flaticon-001-planning: "\f100";
+    $font-Flaticon-002-goal: "\f101";
+    $font-Flaticon-003-investment: "\f102";
+    $font-Flaticon-004-video-conference: "\f103";
+    $font-Flaticon-005-target: "\f104";
+    $font-Flaticon-006-strategy-1: "\f105";
+    $font-Flaticon-007-startup: "\f106";
+    $font-Flaticon-008-advertising: "\f107";
+    $font-Flaticon-009-heart: "\f108";
+    $font-Flaticon-010-website-1: "\f109";
+    $font-Flaticon-011-store: "\f10a";
+    $font-Flaticon-012-report: "\f10b";
+    $font-Flaticon-013-presentation: "\f10c";
+    $font-Flaticon-014-policy: "\f10d";
+    $font-Flaticon-015-strategy: "\f10e";
+    $font-Flaticon-016-speech: "\f10f";
+    $font-Flaticon-017-logistics: "\f110";
+    $font-Flaticon-018-balance: "\f111";
+    $font-Flaticon-019-leader: "\f112";
+    $font-Flaticon-020-idea: "\f113";
+    $font-Flaticon-021-human-resources: "\f114";
+    $font-Flaticon-022-global: "\f115";
+    $font-Flaticon-023-business: "\f116";
+    $font-Flaticon-024-programmer: "\f117";
+    $font-Flaticon-025-data: "\f118";
+    $font-Flaticon-026-customer-support-1: "\f119";
+    $font-Flaticon-027-creative: "\f11a";
+    $font-Flaticon-028-connection: "\f11b";
+    $font-Flaticon-029-visitor: "\f11c";
+    $font-Flaticon-030-website: "\f11d";
+    $font-Flaticon-031-customer-support: "\f11e";
+    $font-Flaticon-032-growth: "\f11f";
+    $font-Flaticon-033-deal: "\f120";
+    $font-Flaticon-034-building: "\f121";
+    $font-Flaticon-035-teamwork: "\f122";
+    $font-Flaticon-036-card: "\f123";

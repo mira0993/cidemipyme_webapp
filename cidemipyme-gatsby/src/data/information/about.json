@@ -1,0 +1,33 @@
+{
+  "id": "about_section",
+  "title": "Quiénes Somos",
+  "intro": [
+    "Somos una empresa que desde el 2002 se ha enfocado en brindar apoyo a organizaciones, desarrollando una cultura empresarial a través del desarrollo de metodologías y aplicación de técnicas de gestión empresarial, gestión de calidad y gestión estratégica"
+  ],
+  "mision": [
+    "Otorgar un servicio de consultoría integral que permita alas micro, pequeñas y medianas empresas consolidarse comoorganizaciones exitosas y posicionadas en el mercado, de tal maneraque puedan alcanzar sus objetivos."
+  ],
+  "values": [
+    {
+      "icon": "flaticon-032-growth",
+      "text": "Compromiso en elevar la calidad de vida de nuestros clientes."
+    },
+    {
+      "icon": "flaticon-019-leader",
+      "text": "Integridad y  honestidad en nuestros actos."
+    },
+    {
+      "icon": "flaticon-035-teamwork",
+      "text": "Disciplina y  constancia que permita el logro de objetivos."
+    },
+    {
+      "icon": "flaticon-009-heart",
+      "text": "Entusiasmo y  pasión en nuestro quehacer diario."
+    }
+
+
+
+
+  ]
+
+}
