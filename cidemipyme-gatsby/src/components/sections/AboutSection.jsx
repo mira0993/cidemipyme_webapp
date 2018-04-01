@@ -11,9 +11,6 @@ import {
   CardDeck
 } from 'reactstrap';
 
-import _600x450_img_2 from '../../assets/images/_600x450_img_2.jpg';
-import _800x500_img_1 from '../../assets/images/_800x500_img_1.jpg';
-
 const AboutPropTypes = {
   title: PropTypes.string.isRequired,
   intro: PropTypes.array.isRequired,
@@ -49,13 +46,6 @@ class AboutSection extends React.Component {
         </Card>
     );
   }
-
-  // <Col lg={7}>
-  //   <div className="images">
-  //     <img className="img1 img-fluid" src={_600x450_img_2} alt="free Template"/>
-  //     <img className="img2" src={_800x500_img_1} alt="free Template"/>
-  //   </div>
-  // </Col>
 
   render() {
     let cards = this.props.data['values'].map(

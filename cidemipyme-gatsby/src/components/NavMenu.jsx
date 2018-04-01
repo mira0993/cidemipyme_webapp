@@ -36,7 +36,7 @@ class NavMenu extends React.Component {
     if (window.innerWidth >= 992) {
       return;
     }
-    
+
     this.setState({
       collapsed: !this.state.collapsed
     });
@@ -53,7 +53,7 @@ class NavMenu extends React.Component {
 
     return (
 
-        <Navbar fixed="top" color="light" className="navbar-expand-lg">
+        <Navbar fixed="top" color="white" className="navbar-expand-lg card-box">
           <NavbarBrand href="#" className="mr-auto">{this.props.logo}</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar.bind(this)} className="mr2">
             <i className="ion-navicon"></i>
@@ -63,7 +63,7 @@ class NavMenu extends React.Component {
               className="ml-auto navbar-nav"
               componentTag="Nav"
               offset={-50}
-              items={ ['section-home', 'section-about'] }
+              items={ ['section-home', 'section-about', 'section-work'] }
               currentClassName="active">
                 {items}
             </Scrollspy>
