@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import AboutSection from '../components/sections/AboutSection.jsx'
-
+import WorkSection from '../components/sections/WorkSection.jsx'
 
 export default ({data}) => {
   return (
@@ -20,7 +20,8 @@ export default ({data}) => {
           </div>
         </div>
       </section>
-      <AboutSection data={data['informationJson']}/>
+      <AboutSection data={data['about']}/>
+      <WorkSection data={data['work']}/>
     </div>
   );
 }
@@ -32,8 +33,11 @@ export const homeQuery = graphql`
         title
       }
     }
-    informationJson(id:{eq:"about_section"}) {
+    about: informationJson(id:{eq:"about_section"}) {
       ...AboutSectionFragment
+    }
+    work: informationJson(id:{eq:"work_section"}) {
+      ...WorkSectionFragment
     }
   }
 `;

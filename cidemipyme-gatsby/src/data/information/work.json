@@ -1,0 +1,39 @@
+{
+  "id": "work_section",
+  "title": "Hacemos negocio su negocio",
+  "work_items": [
+    {
+      "title": "Se crean",
+      "items": [
+        "Capacitación a emprendedores",
+        "Puesta en marcha de nuevas empresas",
+        "Gestión de proyectos",
+        "Creación de alianzas productivas"
+      ]
+    },
+    {
+      "title": "Se impulsan",
+      "items": [
+        "Diagnóstico Organizacional DO",
+        "Consultoría Empresarial CCE",
+        "Consultoría JICA",
+        "Articulación de Alianzas Productivas"
+      ]
+    },
+    {
+      "title": "Se mejoran",
+      "items": [
+        "Capacitación",
+        "Gestión de Calidad",
+        "Gestión Estratégica"
+      ]
+    },
+    {
+      "title": "Se hacen crecer",
+      "items": [
+        "Consultoría en Estrategia de Negocio",
+        "Desarrollo de proveedores"
+      ]
+    }
+  ]
+}
