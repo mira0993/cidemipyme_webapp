@@ -14,10 +14,10 @@ import {
   CardHeader,
   CardColumns,
 } from 'reactstrap';
-import cide_fb_1 from '../../assets/images/cide_fb_1.jpg';
-import cide_fb_2 from '../../assets/images/cide_fb_2.jpg';
-import cide_fb_3 from '../../assets/images/cide_fb_3.jpg';
-import cide_fb_4 from '../../assets/images/cide_fb_4.jpg';
+import cide_fb_1 from 'images/cide_fb_1.jpg';
+import cide_fb_2 from 'images/cide_fb_2.jpg';
+import cide_fb_3 from 'images/cide_fb_3.jpg';
+import cide_fb_4 from 'images/cide_fb_4.jpg';
 
 const workKeyPrefix = 'workSection_';
 
@@ -29,13 +29,13 @@ const workImages = [
 ];
 
 const WorkInnerItemPropType = {
-  "title": PropTypes.string.isRequired,
-  "items": PropTypes.arrayOf(PropTypes.string).isRequired,
+  'title': PropTypes.string.isRequired,
+  'items': PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 const WorkPropType = {
-  "title": PropTypes.string.isRequired,
-  "work_items": PropTypes.arrayOf(PropTypes.shape(WorkInnerItemPropType)).isRequired
+  'title': PropTypes.string.isRequired,
+  'work_items': PropTypes.arrayOf(PropTypes.shape(WorkInnerItemPropType)).isRequired
 }
 
 class WorkSection extends React.Component {
@@ -47,7 +47,7 @@ class WorkSection extends React.Component {
     let textItems = items.map( (text, index) => {
       return (
         <div>
-          <p key={key + '_text_' + index}>{text}</p>
+          <p key={`${key}_text_${index}`}>{text}</p>
         </div>
       );
     });
@@ -66,12 +66,12 @@ class WorkSection extends React.Component {
   }
 
   render() {
-    let cards = this.props.data['work_items'].map(
+    let cards = this.props.data.work_items.map(
       (item, index) => {
-        let key = workKeyPrefix + 'card_' + index;
+        let key = `${workKeyPrefix}card_${index}`;
         return this.createCard(
-          item['title'],
-          item['items'],
+          item.title,
+          item.items,
           workImages[index],
           key
         );
@@ -79,12 +79,12 @@ class WorkSection extends React.Component {
     );
 
     return (
-      <section id='section-work' className="pb_section bg-light">
+      <section id="section-work" className="pb_section bg-light">
         <Container>
           <Row>
             <Col lg={12} md={12} sm={0}>
               <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
-                {this.props.data['title']}
+                {this.props.data.title}
               </h2>
             </Col>
           </Row>

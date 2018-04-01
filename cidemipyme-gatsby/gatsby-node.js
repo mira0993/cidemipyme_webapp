@@ -4,4 +4,16 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
- // You can delete this file if you're not using it
+const path = require('path')
+
+exports.modifyWebpackConfig = ({ config, env }) => {
+  config.merge({
+    resolve: {
+      alias: {
+        images: path.resolve(__dirname, 'src/assets/images'),
+      }
+    }
+  });
+
+  return config;
+}
