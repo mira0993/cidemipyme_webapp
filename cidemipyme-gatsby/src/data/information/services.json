@@ -1,0 +1,73 @@
+{
+  "id": "services_section",
+  "title": "Servicios",
+  "services": [
+    {
+      "title": "Gestión Empresarial",
+      "css_class": "card-fb-img-5",
+      "icon": "flaticon-027-creative",
+      "content": [
+        "Incubadora de Empresas",
+        "Controlando la Producción",
+        "Organizando las Actividades",
+        "Administrando mi Empresa",
+        "Líder de mi Negocio",
+        "El Capital Humano",
+        "El Mercado y las Ventas",
+        "Controlando las Finanza"
+      ]
+    },
+    {
+      "title": "Gestión de la Calidad",
+      "css_class": "card-fb-img-6",
+      "icon": "flaticon-014-policy",
+      "content": [
+        "Producción Esbelta",
+        "Cero Errores (Six Sigma)",
+        "Calidad del Servicio",
+        "Evento Kaizen",
+        "Mejora Continua",
+        "Normas de Calidad"
+      ]
+    },
+    {
+      "title": "Gestión Estratégica",
+      "css_class": "card-fb-img-5",
+      "icon": "flaticon-015-strategy",
+      "content": [
+        "Acelerar el crecimiento de la empresa",
+        "Desarrollo de los Caminos del Negocio",
+        "Impulsar la Tecnología",
+        "Construir el Futuro",
+        "Impulsar la Innovación",
+        "Institucionalización del Negocio",
+        "Ética del Negocio"
+      ]
+    },
+    {
+      "title": "Alianzas Productivas",
+      "css_class": "card-fb-img-6",
+      "icon": "flaticon-028-connection",
+      "content": [
+        "Articulación de Empresarios para la Realización de Proyecto Productivos",
+        "Formación de Articuladores",
+        "Creación de Redes de Negocio",
+        "Desarrollo de Proveedores",
+        "Conferencias sobre Alianzas Productivas"
+      ]
+    },
+    {
+      "title": "Administración de Proyectos",
+      "css_class": "card-fb-img-5",
+      "icon": "flaticon-018-balance",
+      "content": [
+        "Planes de Negocio",
+        "Elaboración de Proyectos Productivos",
+        "Alianzas de Negocios",
+        "Estudios de Mercado",
+        "Diagnósticos Empresariales",
+        "Planes Estratégicos"
+      ]
+    }
+  ]
+}

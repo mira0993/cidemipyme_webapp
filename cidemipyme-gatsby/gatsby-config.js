@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'CIDEMiPyMe',
+    slogan: 'Hacemos Negocio su Negocio'
   },
   plugins: [
     {

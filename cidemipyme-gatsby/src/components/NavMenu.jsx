@@ -23,10 +23,10 @@ class NavMenu extends React.Component {
 
   createItem(item) {
     return (
-      <NavItem key={item['name']}>
-        <NavLink href={item['url']} className="menu-link"
+      <NavItem key={item.name}>
+        <NavLink href={`#${item.url}`} className="menu-link"
           onClick={this.toggleNavbar.bind(this)}>
-          {item['name']}
+          {item.name}
         </NavLink>
       </NavItem>
     );
@@ -47,8 +47,12 @@ class NavMenu extends React.Component {
   }
 
   render() {
-    let items = this.props.items.map(item => {
+    let navItems = this.props.items.map(item => {
       return this.createItem(item, false);
+    });
+
+    let itemNames = this.props.items.map(item => {
+      return item.url;
     });
 
     return (
@@ -63,11 +67,10 @@ class NavMenu extends React.Component {
               className="ml-auto navbar-nav"
               componentTag="Nav"
               offset={-50}
-              items={ ['section-home', 'section-about', 'section-work'] }
+              items={itemNames}
               currentClassName="active">
-                {items}
+                {navItems}
             </Scrollspy>
-
           </Collapse>
         </Navbar>
     );

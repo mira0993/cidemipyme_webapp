@@ -1,7 +1,9 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import AboutSection from '../components/sections/AboutSection.jsx'
-import WorkSection from '../components/sections/WorkSection.jsx'
+import React from 'react';
+import Link from 'gatsby-link';
+import AboutSection from '../components/sections/AboutSection.jsx';
+import WorkSection from '../components/sections/WorkSection.jsx';
+import ServicesSection from '../components/sections/ServicesSection.jsx';
+
 
 export default ({data}) => {
   return (
@@ -12,16 +14,17 @@ export default ({data}) => {
         <div className="container">
           <div className="row align-items-center justify-content-end">
             <div className="col-md-6  order-md-1">
-              <h2 className="heading mb-3">{data['site']['siteMetadata']['title']}</h2>
-              <div className="sub-heading"><p className="mb-5">A free template solely for your Law Firm</p>
-                <p><a href="#section-contact" role="button" className="btn smoothscroll pb_outline-light btn-xl pb_font-13 p-4 rounded-0 pb_letter-spacing-2">Free Consultation</a></p>
+              <h2 className="heading mb-3">{data.site.siteMetadata.title}</h2>
+              <div className="sub-heading">
+                <p className="mb-5">{data.site.siteMetadata.slogan}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <AboutSection data={data['about']}/>
-      <WorkSection data={data['work']}/>
+      <AboutSection data={data.about}/>
+      <WorkSection data={data.work}/>
+      <ServicesSection data={data.services}/>
     </div>
   );
 }
@@ -31,6 +34,7 @@ export const homeQuery = graphql`
     site {
       siteMetadata {
         title
+        slogan
       }
     }
     about: informationJson(id:{eq:"about_section"}) {
@@ -38,6 +42,9 @@ export const homeQuery = graphql`
     }
     work: informationJson(id:{eq:"work_section"}) {
       ...WorkSectionFragment
+    }
+    services: informationJson(id:{eq:"services_section"}) {
+      ...ServicesSectionFragment
     }
   }
 `;
