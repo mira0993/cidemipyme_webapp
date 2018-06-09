@@ -6,7 +6,7 @@ import {
   Container,
 } from 'reactstrap';
 import Slider from "react-slick";
-import SlideCard from '../SlideCard.jsx';
+import SlideCard from 'components/SlideCard.jsx';
 
 const ServiceItemPropType = {
   title: PropTypes.string.isRequired,
@@ -36,15 +36,14 @@ class ServicesSection extends React.Component {
     };
 
     let cards = this.props.data.services.map(
-      (service, index) => {
-        return <SlideCard
+      (service, index) => (
+        <SlideCard
           cssClassImage={service.css_class}
           icon={service.icon}
           title={service.title}
           content={service.content}
-          keyPrefix={servicesKeyPrefix} />;
-      }
-    );
+          keyPrefix={servicesKeyPrefix} />
+      ));
 
     return (
       <section id="section-services" className="pb_section pb_bg-half">

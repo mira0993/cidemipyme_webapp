@@ -12,13 +12,11 @@ import {
 } from 'reactstrap';
 
 class NavMenu extends React.Component {
-  static propTypes = {
-    items: PropTypes.array.isRequired,
-    logo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  }
-
-  state = {
-    collaped: false,
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapsed: false
+    }
   }
 
   createItem(item) {
@@ -47,13 +45,8 @@ class NavMenu extends React.Component {
   }
 
   render() {
-    let navItems = this.props.items.map(item => {
-      return this.createItem(item, false);
-    });
-
-    let itemNames = this.props.items.map(item => {
-      return item.url;
-    });
+    let navItems = this.props.items.map(item => this.createItem(item, false));
+    let itemNames = this.props.items.map(item => item.url);
 
     return (
 
@@ -77,4 +70,8 @@ class NavMenu extends React.Component {
   }
 }
 
+NavMenu.propTypes = {
+  items: PropTypes.array.isRequired,
+  logo: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+}
 export default NavMenu;

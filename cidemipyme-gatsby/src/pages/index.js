@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import AboutSection from '../components/sections/AboutSection.jsx';
-import WorkSection from '../components/sections/WorkSection.jsx';
-import ServicesSection from '../components/sections/ServicesSection.jsx';
+import AboutSection from 'sections/AboutSection.jsx';
+import WorkSection from 'sections/WorkSection.jsx';
+import ServicesSection from 'sections/ServicesSection.jsx';
 
 
 export default ({data}) => {
