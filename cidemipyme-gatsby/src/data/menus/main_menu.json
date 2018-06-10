@@ -4,37 +4,37 @@
     {
       "id": "home",
       "name": "Inicio",
-      "url": "#section-home"
+      "url": "section-home"
     },
     {
       "id": "about",
       "name": "¿Quiénes somos?",
-      "url": "#section-about"
+      "url": "section-about"
     },
     {
       "id": "do",
       "name": "¿Qué hacemos?",
-      "url": "#section-work"
+      "url": "section-work"
     },
     {
       "id": "services",
       "name": "Servicios",
-      "url": "#section-about4"
+      "url": "section-services"
     },
     {
       "id": "cce",
       "name": "CCE",
-      "url": "#section-about5"
+      "url": "#section-cce"
     },
     {
       "id": "clients",
       "name": "Nuestros cliente",
-      "url": "#section-about6"
+      "url": "#section-clients"
     },
     {
       "id": "contact",
       "name": "Contacto",
-      "url": "#section-about7"
+      "url": "#section-contact"
     }
   ]
 }

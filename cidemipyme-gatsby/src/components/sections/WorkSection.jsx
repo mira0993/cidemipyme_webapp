@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import {
   Container,
@@ -46,8 +45,8 @@ class WorkSection extends React.Component {
   createCard(title, items, image, key) {
     let textItems = items.map( (text, index) => {
       return (
-        <div>
-          <p key={`${key}_text_${index}`}>{text}</p>
+        <div key={`${key}_text_${index}`}>
+          <p>{text}</p>
         </div>
       );
     });
