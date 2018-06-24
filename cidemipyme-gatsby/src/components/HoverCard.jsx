@@ -16,9 +16,11 @@ class HoverCard extends React.Component {
   }
 
   renderText() {
-    return this.props.text.map( (paragraph, index) => {
-      return <p key={`${this.props.keyPrefix}${hoverCardKeyPrefix}${index}`}>{paragraph}</p>;
-    });
+    return this.props.text.map( (paragraph, index) => (
+      <p key={`${this.props.keyPrefix}${hoverCardKeyPrefix}${index}`}>
+        {paragraph}
+      </p>
+    ));
   }
 
   render() {

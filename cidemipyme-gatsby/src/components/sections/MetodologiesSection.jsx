@@ -1,23 +1,22 @@
-import React from 'react';
+import HoverCard from 'components/HoverCard.jsx';
+import metodology_business_architecture from 'images/metodologia_arquitectura_negocio.png';
+import metodology_cce from 'images/metodologia_cce.png';
+import metodology_cidetalento from 'images/metodologia_cidetalento.png';
+import metodology_growth_strategy from 'images/metodologia_estrategia_crecimiento.png';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {
-  Container,
   Col,
+  Container,
   Row,
 } from 'reactstrap';
-import HoverCard from 'components/HoverCard.jsx';
-
-import metodology_cce from 'images/metodologia_cce.png';
-import metodology_business_architecture from 'images/metodologia_arquitectura_negocio.png';
-import metodology_growth_strategy from 'images/metodologia_estrategia_crecimiento.png';
-import metodology_cidetalento from 'images/metodologia_cidetalento.png';
 
 const metodologiesKeyPrefix = 'metodologiesSection_';
 const metodologiesImages = {
-  'cce': metodology_cce,
-  'business_architecture': metodology_business_architecture,
-  'growth_strategy': metodology_growth_strategy,
-  'cidetalento': metodology_cidetalento,
+  cce: metodology_cce,
+  business_architecture: metodology_business_architecture,
+  growth_strategy: metodology_growth_strategy,
+  cidetalento: metodology_cidetalento,
 };
 
 
@@ -34,13 +33,11 @@ const MetodologiesPropTypes = {
 
 class MetodologiesSection extends React.Component {
   renderContent(content, keyPrefix) {
-    return content.map((text, index) => {
-      return (
-        <div key={`${keyPrefix}${index}`}>
-          <p>{text}</p>
-        </div>
-      );
-    });
+    return content.map((text, index) => (
+      <div key={`${keyPrefix}${index}`}>
+        <p>{text}</p>
+      </div>
+    ));
   }
 
   render() {
@@ -73,7 +70,7 @@ class MetodologiesSection extends React.Component {
       <section id="section-metodologies" className="pb_section bg-light">
         <Container>
           <Row>
-            <Col lg={12} md={12} sm={0}>
+            <Col lg={12} md={12}>
               <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
                 {this.props.data.title}
               </h2>
