@@ -47,15 +47,15 @@ class MethodologiesSection extends React.Component {
 
     for(let i=0; i < totalCards; i+=2) {
       cards.push(
-        <Row className="row-padding-top-30">
-          <Col md={6} key={`${key}${i}`}>
+        <Row className="row-padding-top-30" key={`${key}${i / 2}`}>
+          <Col md={6}>
             <HoverCard
               title={this.props.data.methodologies[i].title}
               text={this.props.data.methodologies[i].content}
               image={methodologiesImages[this.props.data.methodologies[i].id]}
               keyPrefix={`${key}${i}`}/>
           </Col>
-          <Col md={6} key={`${key}${i + 1}`}>
+          <Col md={6}>
             <HoverCard
               title={this.props.data.methodologies[i + 1].title}
               text={this.props.data.methodologies[i + 1].content}
@@ -70,7 +70,7 @@ class MethodologiesSection extends React.Component {
       <section id="section-methodologies" className="pb_section bg-light">
         <Container>
           <Row>
-            <Col lg={12} md={12} >
+            <Col md={12}>
               <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
                 {this.props.data.title}
               </h2>
