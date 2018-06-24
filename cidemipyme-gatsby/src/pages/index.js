@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import AboutSection from 'sections/AboutSection.jsx';
 import WorkSection from 'sections/WorkSection.jsx';
 import ServicesSection from 'sections/ServicesSection.jsx';
-import MetodologiesSection from 'sections/MetodologiesSection.jsx';
+import MethodologiesSection from 'sections/MethodologiesSection.jsx';
 
 export default ({data}) => {
   return (
@@ -25,7 +25,7 @@ export default ({data}) => {
       <AboutSection data={data.about}/>
       <WorkSection data={data.work}/>
       <ServicesSection data={data.services}/>
-      <MetodologiesSection data={data.metodologies}/>
+      <MethodologiesSection data={data.methodologies}/>
     </div>
   );
 }
@@ -44,8 +44,8 @@ export const homeQuery = graphql`
     work: informationJson(id:{eq:"work_section"}) {
       ...WorkSectionFragment
     }
-    metodologies: informationJson(id:{eq:"metodologies_section"}) {
-      ...MetodologiesSectionFragment
+    methodologies: informationJson(id:{eq:"methodologies_section"}) {
+      ...MethodologiesSectionFragment
     }
     services: informationJson(id:{eq:"services_section"}) {
       ...ServicesSectionFragment
