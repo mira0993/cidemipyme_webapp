@@ -17,14 +17,14 @@
       "url": "section-work"
     },
     {
+      "id": "methodologies",
+      "name": "Metodologías",
+      "url": "section-methodologies"
+    },
+    {
       "id": "services",
       "name": "Servicios",
       "url": "section-services"
-    },
-    {
-      "id": "cce",
-      "name": "CCE",
-      "url": "#section-cce"
     },
     {
       "id": "clients",
