@@ -27,14 +27,9 @@
       "url": "section-services"
     },
     {
-      "id": "clients",
-      "name": "Nuestros cliente",
-      "url": "#section-clients"
-    },
-    {
       "id": "contact",
       "name": "Contacto",
-      "url": "#section-contact"
+      "url": "section-contact"
     }
   ]
 }

@@ -4,6 +4,7 @@ import AboutSection from 'sections/AboutSection.jsx';
 import WorkSection from 'sections/WorkSection.jsx';
 import ServicesSection from 'sections/ServicesSection.jsx';
 import MethodologiesSection from 'sections/MethodologiesSection.jsx';
+import ContactSection from 'sections/ContactSection.jsx';
 
 export default ({data}) => {
   return (
@@ -26,6 +27,7 @@ export default ({data}) => {
       <WorkSection data={data.work}/>
       <ServicesSection data={data.services}/>
       <MethodologiesSection data={data.methodologies}/>
+      <ContactSection data={data.contact}/>
     </div>
   );
 }
@@ -49,6 +51,9 @@ export const homeQuery = graphql`
     }
     services: informationJson(id:{eq:"services_section"}) {
       ...ServicesSectionFragment
+    }
+    contact: informationJson(id:{eq:"contact_section"}) {
+      ...ContactSectionFragment
     }
   }
 `;
