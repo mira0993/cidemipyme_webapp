@@ -5,11 +5,11 @@ import {
   Col,
   Container,
   Form,
-  FormGroup,
   FormFeedback,
-  Label,
-  Input,
+  FormGroup,
   FormText,
+  Input,
+  Label,
   Row
 } from 'reactstrap';
 
@@ -29,29 +29,25 @@ class ContactSection extends React.Component {
       subjectText: '',
       messageText: '',
       showErrors: false,
+      showSentMessage: false,
     };
-  }
-
-  isSubmitButtonEnabled() {
-    let ret =
-      this.state.hasEmail
-      && this.state.hasSubject
-      && this.state.hasMessage;
-    return ret;
   }
 
   onChangeInput(inputType, event) {
     if (inputType === 'email') {
       this.setState({
-        emailText: event.target.value
+        emailText: event.target.value,
+        showSentMessage: false,
       });
     } else if (inputType === 'subject') {
       this.setState({
-        subjectText: event.target.value
+        subjectText: event.target.value,
+        showSentMessage: false,
       });
     } else if (inputType === 'message') {
       this.setState({
-        messageText: event.target.value
+        messageText: event.target.value,
+        showSentMessage: false,
       });
     }
   }
@@ -67,6 +63,10 @@ class ContactSection extends React.Component {
       event.preventDefault();
     } else {
       this.setState({
+        emailText: '',
+        subjectText: '',
+        messageText: '',
+        showSentMessage: true,
         showErrors: false
       });
     }
@@ -75,17 +75,22 @@ class ContactSection extends React.Component {
   renderMailToForm() {
     let emailFeedback =
       this.state.showErrors && this.state.emailText.length === 0
-        ? <FormFeedback>Escribe un correo personal válido</FormFeedback>
+        ? <FormFeedback>Escribe un correo personal válido.</FormFeedback>
         : null;
     let subjectFeedback =
       this.state.showErrors && this.state.subjectText.length === 0
-        ? <FormFeedback>Escribe un asunto para mostrar en el correo</FormFeedback>
+        ? <FormFeedback>Escribe un asunto para mostrar en el correo.</FormFeedback>
         : null;
     let messageFeedback =
       this.state.showErrors && this.state.messageText.length === 0
-        ? <FormFeedback>Redacta el cuerpo del correo aquí</FormFeedback>
+        ? <FormFeedback>Redacta el cuerpo del correo aquí.</FormFeedback>
         : null;
-    console.log(messageFeedback);
+    let sentMessage = this.state.showSentMessage
+        ? <FormText>
+           {'Recibirás en tu correo una copia del mensaje. Respondemos en 24 horas promedio.'}
+          </FormText>
+        : null;
+
     return (
       <Form className="contact-form" method="post" action={this.props.script} target="_blank">
         <FormGroup>
@@ -100,6 +105,7 @@ class ContactSection extends React.Component {
               ? null : false
             }
             onChange={this.onChangeInput.bind(this, 'email')}
+            value={this.state.emailText}
             placeholder="Correo electrónico" />
           {emailFeedback}
         </FormGroup>
@@ -115,6 +121,7 @@ class ContactSection extends React.Component {
               ? null : false
             }
             onChange={this.onChangeInput.bind(this, 'subject')}
+            value={this.state.subjectText}
             placeholder="Título del correo" />
           {subjectFeedback}
         </FormGroup>
@@ -130,13 +137,15 @@ class ContactSection extends React.Component {
               ? null : false
             }
             onChange={this.onChangeInput.bind(this, 'message')}
+            value={this.state.messageText}
             placeholder="Escribir mensaje aquí..." />
           {messageFeedback}
         </FormGroup>
+        {sentMessage}
         <Button
           outline
           color="info"
-          className="pb_font-13 pb_letter-spacing-2 p-3 rounded-0"
+          className="pb_font-13 pb_letter-spacing-2 p-3 rounded-0 contact-button"
           type="submit"
           onClick={this.onSubmitMessage.bind(this)}>
           Enviar
@@ -147,7 +156,7 @@ class ContactSection extends React.Component {
 
   renderContactDetails() {
     let address = this.props.data.address.map((value, index) => (
-      <p index={'ContactDetailsAddress' + index}>{value}</p>
+      <p key={'ContactDetailsAddress' + index}>{value}</p>
     ));
 
     return(
@@ -192,8 +201,7 @@ class ContactSection extends React.Component {
                 <iframe
                   id="google-maps-canvas"
                   src={this.props.data.map}
-                  frameborder="0"
-                  allowfullScreen>
+                  allowFullScreen>
                 </iframe>
               </Col>
           </Row>
