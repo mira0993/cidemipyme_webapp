@@ -63,9 +63,6 @@ class ContactSection extends React.Component {
       event.preventDefault();
     } else {
       this.setState({
-        emailText: '',
-        subjectText: '',
-        messageText: '',
         showSentMessage: true,
         showErrors: false
       });

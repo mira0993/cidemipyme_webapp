@@ -33,3 +33,6 @@ if(isset($_POST["email"])) {
   mail($to, $subject, $html_message, $headers);
 }
 ?>
+<script type='text/javascript'>
+  window.close();
+</script>
