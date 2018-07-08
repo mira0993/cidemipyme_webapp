@@ -27,7 +27,9 @@ export default ({data}) => {
       <WorkSection data={data.work}/>
       <ServicesSection data={data.services}/>
       <MethodologiesSection data={data.methodologies}/>
-      <ContactSection data={data.contact}/>
+      <ContactSection
+        data={data.contact}
+        script={data.send_message_script.edges[0].node.publicURL}/>
     </div>
   );
 }
@@ -54,6 +56,13 @@ export const homeQuery = graphql`
     }
     contact: informationJson(id:{eq:"contact_section"}) {
       ...ContactSectionFragment
+    }
+    send_message_script: allFile(filter: { name: { eq: "send_email" } }) {
+      edges {
+        node {
+          publicURL
+        }
+      }
     }
   }
 `;

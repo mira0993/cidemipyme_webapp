@@ -215,4 +215,10 @@
 .embed-responsive-200 {
   padding-bottom: 200px;
 }
+.google-maps-location {
+  padding: 20px 0 20px 0;
+}
 /* --------------- */
+.contact-form {
+  padding-top:20px;
+}

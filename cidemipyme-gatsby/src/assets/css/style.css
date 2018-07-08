@@ -1507,12 +1507,12 @@ a {
   margin-bottom: 0; }
 
 .pb_contact_details_v1 {
-  margin: 0;
+  margin: 2em 0 0 0;
   padding: 0; }
   .pb_contact_details_v1 li {
     list-style: none;
     padding: 0;
-    margin: 0 0 1em 0;
+    margin: 0 0 3em 0;
     color: #212529; }
     .pb_contact_details_v1 li span {
       display: block;
