@@ -222,7 +222,18 @@
 .contact-form {
   padding-top:20px;
 }
-
 .contact-button {
   margin-top: 10px;
+}
+.section-header {
+  margin-bottom: 3em !important;
+}
+.services-image {
+  width:90%;
+  height:auto;
+}
+@media screen and (max-width: 480px) {
+  .services-image {
+    width: 100%;
+  }
 }

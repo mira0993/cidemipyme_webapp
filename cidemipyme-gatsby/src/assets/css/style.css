@@ -1305,7 +1305,7 @@ a {
   background: rgba(255, 255, 255, 0.7) !important; }
 
 .pb_section {
-  padding: 9em 0;
+  padding: 5em 0;
   position: relative;
   display: block; }
   @media (max-width: 991px) {

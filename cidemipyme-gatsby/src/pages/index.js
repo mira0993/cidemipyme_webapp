@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutSection from 'sections/AboutSection.jsx';
+import CoparmexSection from 'sections/CoparmexSection.jsx';
 import WorkSection from 'sections/WorkSection.jsx';
 import ServicesSection from 'sections/ServicesSection.jsx';
 import MethodologiesSection from 'sections/MethodologiesSection.jsx';
@@ -23,9 +24,10 @@ export default ({data}) => {
         </div>
       </section>
       <AboutSection data={data.about}/>
+      <CoparmexSection data={data.coparmex}/>
       <WorkSection data={data.work}/>
-      <ServicesSection data={data.services}/>
       <MethodologiesSection data={data.methodologies}/>
+      <ServicesSection data={data.services}/>
       <ContactSection
         data={data.contact}
         script={data.send_message_script.edges[0].node.publicURL}/>
@@ -46,6 +48,9 @@ export const homeQuery = graphql`
     }
     work: informationJson(id:{eq:"work_section"}) {
       ...WorkSectionFragment
+    }
+    coparmex: informationJson(id: {eq:"coparmex_section"}) {
+      ...CoparmexSectionFragment
     }
     methodologies: informationJson(id:{eq:"methodologies_section"}) {
       ...MethodologiesSectionFragment

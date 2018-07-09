@@ -1,34 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import {
   Container,
   Row,
   Col,
-  Card,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardDeck,
-  CardBody,
-  CardHeader,
-  CardColumns,
 } from 'reactstrap';
-import cide_fb_1 from 'images/cide_fb_1.jpg';
-import cide_fb_2 from 'images/cide_fb_2.jpg';
-import cide_fb_3 from 'images/cide_fb_3.jpg';
-import cide_fb_4 from 'images/cide_fb_4.jpg';
+import cideServices from 'images/cide_services.png';
 
 const workKeyPrefix = 'workSection_';
 
-const workImages = [
-  cide_fb_1,
-  cide_fb_2,
-  cide_fb_3,
-  cide_fb_4,
-];
-
 const WorkInnerItemPropType = {
   'title': PropTypes.string.isRequired,
+  'icon': PropTypes.string.isRequired,
   'items': PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
@@ -38,29 +22,26 @@ const WorkPropType = {
 }
 
 class WorkSection extends React.Component {
-  static propTypes = {
-    data: PropTypes.shape(WorkPropType).isRequired
-  }
-
-  createCard(title, items, image, key) {
-    let textItems = items.map( (text, index) => {
-      return (
-        <div key={`${key}_text_${index}`}>
-          <p>{text}</p>
-        </div>
-      );
-    });
-
+  createWorkCard(title, icon, items, key) {
+    let textItems = items.map((text, index) => (
+      <li key={`${key}_text_${index}`}>{text}</li>
+    ));
     return (
-      <Card key={key}>
-        <CardImg top width="100%" src={image} alt="Card image cap" />
-        <CardHeader className="card-shadow work-card-header">{title}</CardHeader>
-        <CardBody className="card-shadow">
-          <CardText className="work-item-text">
+      <Col lg={6} md={6} sm={12}>
+        <div className="media pb_media_v1 mb-5">
+          <div className="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary">
+            <i className={`flaticon ${icon}`}/>
+          </div>
+          <div className="media-body">
+          <h3 className="mt-0 pb_font-17">
+            {title}
+          </h3>
+          <ul className="pb_font-14">
             {textItems}
-          </CardText>
-        </CardBody>
-      </Card>
+          </ul>
+          </div>
+        </div>
+      </Col>
     );
   }
 
@@ -68,30 +49,31 @@ class WorkSection extends React.Component {
     let cards = this.props.data.work_items.map(
       (item, index) => {
         let key = `${workKeyPrefix}card_${index}`;
-        return this.createCard(
+        return this.createWorkCard(
           item.title,
+          item.icon,
           item.items,
-          workImages[index],
           key
         );
       }
     );
 
     return (
-      <section id="section-work" className="pb_section bg-light">
+      <section id="section-work" className="pb_section">
         <Container>
           <Row>
-            <Col lg={12} md={12} sm={0}>
-              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
+            <Col lg={12}>
+              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal section-header">
                 {this.props.data.title}
               </h2>
             </Col>
           </Row>
           <Row>
-            <Col lg={12} md={12} sm={0}>
-              <CardDeck>
-                {cards}
-              </CardDeck>
+            {cards}
+          </Row>
+          <Row>
+            <Col sm={12} md={{size: 8, offset:2}}>
+              <img className="services-image" alt="CIDEMiPyMe Diagrama de Servicios" src={cideServices}/>
             </Col>
           </Row>
         </Container>
@@ -102,11 +84,16 @@ class WorkSection extends React.Component {
 
 export default WorkSection;
 
+WorkSection.propTypes = {
+  data: PropTypes.shape(WorkPropType).isRequired
+}
+
 export const GraphQlWorkSectionFragment = graphql `
   fragment WorkSectionFragment on InformationJson {
     title
     work_items {
       title
+      icon
       items
     }
   }
