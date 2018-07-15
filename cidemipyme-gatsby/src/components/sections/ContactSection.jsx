@@ -31,25 +31,17 @@ class ContactSection extends React.Component {
       showErrors: false,
       showSentMessage: false,
     };
+
+    this.onChangeEmail = this.onChangeInput.bind(this, 'email');
+    this.onChangeSubject = this.onChangeInput.bind(this, 'subject');
+    this.onChangeMessage = this.onChangeInput.bind(this, 'message');
   }
 
   onChangeInput(inputType, event) {
-    if (inputType === 'email') {
-      this.setState({
-        emailText: event.target.value,
-        showSentMessage: false,
-      });
-    } else if (inputType === 'subject') {
-      this.setState({
-        subjectText: event.target.value,
-        showSentMessage: false,
-      });
-    } else if (inputType === 'message') {
-      this.setState({
-        messageText: event.target.value,
-        showSentMessage: false,
-      });
-    }
+    this.setState({
+      [`${inputType}Text`]: event.target.value,
+      showSentMessage: false,
+    });
   }
 
   onSubmitMessage(event) {
@@ -101,7 +93,7 @@ class ContactSection extends React.Component {
               !this.state.showErrors || this.state.emailText.length > 0
               ? null : false
             }
-            onChange={this.onChangeInput.bind(this, 'email')}
+            onChange={this.onChangeEmail}
             value={this.state.emailText}
             placeholder="Correo electrónico" />
           {emailFeedback}
@@ -117,7 +109,7 @@ class ContactSection extends React.Component {
               !this.state.showErrors || this.state.subjectText.length > 0
               ? null : false
             }
-            onChange={this.onChangeInput.bind(this, 'subject')}
+            onChange={this.onChangeSubject}
             value={this.state.subjectText}
             placeholder="Título del correo" />
           {subjectFeedback}
@@ -133,7 +125,7 @@ class ContactSection extends React.Component {
               !this.state.showErrors || this.state.messageText.length > 0
               ? null : false
             }
-            onChange={this.onChangeInput.bind(this, 'message')}
+            onChange={this.onChangeMessage}
             value={this.state.messageText}
             placeholder="Escribir mensaje aquí..." />
           {messageFeedback}
@@ -153,7 +145,7 @@ class ContactSection extends React.Component {
 
   renderContactDetails() {
     let address = this.props.data.address.map((value, index) => (
-      <p key={'ContactDetailsAddress' + index}>{value}</p>
+      <p key={`ContactDetailsAddress${index}`}>{value}</p>
     ));
 
     return(
@@ -179,7 +171,7 @@ class ContactSection extends React.Component {
       <section id="section-contact" className="pb_section">
         <Container>
           <Row>
-            <Col md={12}>
+            <Col>
               <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
                 {this.props.data.title}
               </h2>
@@ -194,7 +186,7 @@ class ContactSection extends React.Component {
             </Col>
           </Row>
           <Row className="google-maps-location">
-              <Col md={12} className="embed-responsive embed-responsive-200">
+              <Col className="embed-responsive embed-responsive-200">
                 <iframe
                   id="google-maps-canvas"
                   src={this.props.data.map}
