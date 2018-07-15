@@ -16,7 +16,7 @@ const clientLogos = Array.from(
 
 class ClientsSection extends React.Component {
   render() {
-    let sliderSettings = {
+    const sliderSettings = {
       slidesToShow: 6,
       slidesToScroll: 2,
       infinite: true,
