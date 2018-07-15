@@ -17,7 +17,7 @@ const CoparmexItemPropTypes = {
 
 const CoparmexPropTypes = {
   title: PropTypes.string.isRequired,
-  coparmex_items: PropTypes.arrayOf(CoparmexItemPropTypes).isRequired,
+  coparmex_items: PropTypes.arrayOf(PropTypes.shape(CoparmexItemPropTypes)).isRequired,
 }
 
 class CoparmexSection extends React.Component {
