@@ -168,7 +168,7 @@ class ContactSection extends React.Component {
 
   render () {
     return (
-      <section id="section-contact" className="pb_section">
+      <section id="section-contact" className="pb_section bg-light">
         <Container>
           <Row>
             <Col>

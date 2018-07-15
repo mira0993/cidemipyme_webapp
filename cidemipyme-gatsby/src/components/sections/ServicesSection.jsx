@@ -46,7 +46,7 @@ class ServicesSection extends React.Component {
       ));
 
     return (
-      <section id="section-services" className="pb_section pb_bg-half">
+      <section id="section-services" className="pb_section">
         <Container>
           <Row>
             <Col lg={12} md={12} sm={0}>

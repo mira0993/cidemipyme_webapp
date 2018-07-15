@@ -1,0 +1,22 @@
+{
+  "id": "coparmex_section",
+  "title": "Aliados Estratégicos de Coparmex Jalisco",
+  "coparmex_items": [
+    {
+      "title": "Compromiso",
+      "icon": "flaticon-001-planning",
+      "text": "En los últimos cinco años hemos tenido el compromiso de desarrollar más y mejores empresas a través de la intervención en consultoría de todas las empresas socias."
+
+    },
+    {
+      "title": "Diagnósticos",
+      "icon": "flaticon-010-website-1",
+      "text": "Se han realizado para Coparmex Jalisco 445 diagnósticos organizacionales a empresas de diversos sectores."
+    },
+    {
+      "title": "Consultorías",
+      "icon": "flaticon-007-startup",
+      "text": "Se ha intervenido con consultoría a 122 empresas socias Coparmex, donde el 80% han alcanzado resultados positivos, ya sea en incremento de ventas, productividad o rentabilidad."
+    }
+  ]
+}

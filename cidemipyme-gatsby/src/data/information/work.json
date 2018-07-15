@@ -4,6 +4,7 @@
   "work_items": [
     {
       "title": "Se crean",
+      "icon": "flaticon-001-planning",
       "items": [
         "Capacitación a emprendedores",
         "Puesta en marcha de nuevas empresas",
@@ -13,6 +14,7 @@
     },
     {
       "title": "Se impulsan",
+      "icon": "flaticon-007-startup",
       "items": [
         "Diagnóstico Organizacional DO",
         "Consultoría Empresarial CCE",
@@ -22,6 +24,7 @@
     },
     {
       "title": "Se mejoran",
+      "icon": "flaticon-010-website-1",
       "items": [
         "Capacitación",
         "Gestión de Calidad",
@@ -30,6 +33,7 @@
     },
     {
       "title": "Se hacen crecer",
+      "icon": "flaticon-023-business",
       "items": [
         "Consultoría en Estrategia de Negocio",
         "Desarrollo de proveedores"
