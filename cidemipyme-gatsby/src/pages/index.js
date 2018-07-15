@@ -1,9 +1,9 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import AboutSection from 'sections/AboutSection.jsx';
 import WorkSection from 'sections/WorkSection.jsx';
 import ServicesSection from 'sections/ServicesSection.jsx';
 import MethodologiesSection from 'sections/MethodologiesSection.jsx';
+import ContactSection from 'sections/ContactSection.jsx';
 
 export default ({data}) => {
   return (
@@ -26,6 +26,9 @@ export default ({data}) => {
       <WorkSection data={data.work}/>
       <ServicesSection data={data.services}/>
       <MethodologiesSection data={data.methodologies}/>
+      <ContactSection
+        data={data.contact}
+        script={data.send_message_script.edges[0].node.publicURL}/>
     </div>
   );
 }
@@ -49,6 +52,16 @@ export const homeQuery = graphql`
     }
     services: informationJson(id:{eq:"services_section"}) {
       ...ServicesSectionFragment
+    }
+    contact: informationJson(id:{eq:"contact_section"}) {
+      ...ContactSectionFragment
+    }
+    send_message_script: allFile(filter: { name: { eq: "send_email" } }) {
+      edges {
+        node {
+          publicURL
+        }
+      }
     }
   }
 `;

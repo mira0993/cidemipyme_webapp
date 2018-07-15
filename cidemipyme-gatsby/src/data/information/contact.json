@@ -1,0 +1,11 @@
+{
+  "id": "contact_section",
+  "title": "Contáctanos",
+  "address": [
+    "La Cauda 939 Col. Jardínes del Bosque",
+    "Guadalajara, Jalisco, México"
+  ],
+  "map": "https://maps.google.com/maps?q=calle%20la%20cauda%20939%20guadalajara%20jalisco&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  "phone": "+52 33 4444 7851",
+  "email": "informacion@cidemipymes.com.mx"
+}
