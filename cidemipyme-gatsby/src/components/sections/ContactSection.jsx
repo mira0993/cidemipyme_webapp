@@ -62,19 +62,19 @@ class ContactSection extends React.Component {
   }
 
   renderMailToForm() {
-    let emailFeedback =
+    const emailFeedback =
       this.state.showErrors && this.state.emailText.length === 0
         ? <FormFeedback>Escribe un correo personal válido.</FormFeedback>
         : null;
-    let subjectFeedback =
+    const subjectFeedback =
       this.state.showErrors && this.state.subjectText.length === 0
         ? <FormFeedback>Escribe un asunto para mostrar en el correo.</FormFeedback>
         : null;
-    let messageFeedback =
+    const messageFeedback =
       this.state.showErrors && this.state.messageText.length === 0
         ? <FormFeedback>Redacta el cuerpo del correo aquí.</FormFeedback>
         : null;
-    let sentMessage = this.state.showSentMessage
+    const sentMessage = this.state.showSentMessage
         ? <FormText>
            {'Recibirás en tu correo una copia del mensaje. Respondemos en 24 horas promedio.'}
           </FormText>
@@ -144,7 +144,7 @@ class ContactSection extends React.Component {
   }
 
   renderContactDetails() {
-    let address = this.props.data.address.map((value, index) => (
+    const address = this.props.data.address.map((value, index) => (
       <p key={`ContactDetailsAddress${index}`}>{value}</p>
     ));
 
