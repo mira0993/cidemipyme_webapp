@@ -42,28 +42,25 @@ class CoparmexSection extends React.Component {
   }
 
   render() {
-    let cards = this.props.data.coparmex_items.map(
-      (item, index) => {
-        let key = `${coparmexKeyPrefix}card_${index}`;
-        return this.createItemCard(
-          item.title,
-          item.icon,
-          item.text,
-          key
-        );
-      }
-    );
+    const cards = this.props.data.coparmex_items.map((item, index) => (
+      this.createItemCard(
+        item.title,
+        item.icon,
+        item.text,
+        `${coparmexKeyPrefix}card_${index}`
+      )
+    ));
 
     return(
       <section id="section-coparmex" className="pb_section bg-light">
         <Container>
           <Row>
-            <Col md={10} sm={10}>
+            <Col sm={10}>
               <h2 className="mt-0 heading-border-top mb-3 font-weight-normal section-header">
                 {this.props.data.title}
               </h2>
             </Col>
-            <Col md={2} sm={2}>
+            <Col sm={2}>
               <img alt="Coparmex Jalisco Logo" src={coparmexLogo}/>
             </Col>
           </Row>
