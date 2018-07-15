@@ -23,7 +23,7 @@ const CoparmexPropTypes = {
 class CoparmexSection extends React.Component {
   createItemCard(title, icon, text, key) {
     return (
-      <Col lg={4} md={12} sm={12} key={key}>
+      <Col lg={4} sm={12} key={key}>
         <div className="media pb_media_v1 mb-5">
           <div className="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary">
             <i className={`flaticon ${icon}`}/>
