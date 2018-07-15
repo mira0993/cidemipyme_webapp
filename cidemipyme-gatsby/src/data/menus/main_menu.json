@@ -12,6 +12,11 @@
       "url": "section-about"
     },
     {
+      "id": "clients",
+      "name": "Aliados Coparmex",
+      "url": "section-clients"
+    },
+    {
       "id": "do",
       "name": "¿Qué hacemos?",
       "url": "section-work"

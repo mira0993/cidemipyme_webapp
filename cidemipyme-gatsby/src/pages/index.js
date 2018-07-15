@@ -5,6 +5,7 @@ import WorkSection from 'sections/WorkSection.jsx';
 import ServicesSection from 'sections/ServicesSection.jsx';
 import MethodologiesSection from 'sections/MethodologiesSection.jsx';
 import ContactSection from 'sections/ContactSection.jsx';
+import ClientsSection from 'sections/ClientsSection.jsx';
 
 export default ({data}) => {
   return (
@@ -24,6 +25,7 @@ export default ({data}) => {
         </div>
       </section>
       <AboutSection data={data.about}/>
+      <ClientsSection/>
       <CoparmexSection data={data.coparmex}/>
       <WorkSection data={data.work}/>
       <MethodologiesSection data={data.methodologies}/>
