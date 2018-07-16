@@ -12,9 +12,11 @@ import {
   Label,
   Row
 } from 'reactstrap';
+import jquery from 'jquery';
 
 const ContactPropTypes = {
   title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
   address: PropTypes.arrayOf(PropTypes.string).isRequired,
   map: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
@@ -30,6 +32,7 @@ class ContactSection extends React.Component {
       messageText: '',
       showErrors: false,
       showSentMessage: false,
+      showSendFailureMessage: false,
     };
 
     this.onChangeEmail = this.onChangeInput.bind(this, 'email');
@@ -41,10 +44,12 @@ class ContactSection extends React.Component {
     this.setState({
       [`${inputType}Text`]: event.target.value,
       showSentMessage: false,
+      showSentErrorMessage: false,
     });
   }
 
   onSubmitMessage(event) {
+    event.preventDefault();
     if (this.state.emailText.length === 0
       || this.state.subjectText.length === 0
       || this.state.messageText.length === 0
@@ -52,11 +57,31 @@ class ContactSection extends React.Component {
       this.setState({
         showErrors: true
       });
-      event.preventDefault();
     } else {
-      this.setState({
-        showSentMessage: true,
-        showErrors: false
+      window.$ = window.jQuery=jquery;
+      const that = this;
+
+      $.post(
+        this.props.data.url,
+        JSON.stringify({
+          subject: this.state.subjectText,
+          email: this.state.emailText,
+          message: this.state.messageText
+        })
+      ).done(function(data) {
+        that.setState({
+          showSentMessage: true,
+          showErrors: false,
+          emailText: '',
+          subjectText: '',
+          messageText: '',
+          showSentErrorMessage: false,
+        });
+      }).fail(function(err) {
+        that.setState({
+          showSentErrorMessage: true,
+        })
+        console.error(err);
       });
     }
   }
@@ -76,12 +101,17 @@ class ContactSection extends React.Component {
         : null;
     const sentMessage = this.state.showSentMessage
         ? <FormText>
-           {'Recibirás en tu correo una copia del mensaje. Respondemos en 24 horas promedio.'}
+           {'Tu mensaje ha sido enviado. Respondemos en 24 horas promedio.'}
+          </FormText>
+        : null;
+    const sentFailureMessage = this.state.showSentErrorMessage
+        ? <FormText color="danger">
+           {'Lo sentimos, no hemos podido enviar tu mensaje. Intenta nuevamente.'}
           </FormText>
         : null;
 
     return (
-      <Form className="contact-form" method="post" action={this.props.script} target="_blank">
+      <Form className="contact-form">
         <FormGroup>
           <Label for="senderEmail">Correo</Label>
           <Input
@@ -131,6 +161,7 @@ class ContactSection extends React.Component {
           {messageFeedback}
         </FormGroup>
         {sentMessage}
+        {sentFailureMessage}
         <Button
           outline
           color="info"
@@ -209,8 +240,9 @@ ContactSection.propTypes = {
 
 export const GraphQlContactSectionFragment = graphql `
   fragment ContactSectionFragment on InformationJson {
-    title
     id
+    title
+    url
     address
     phone
     email
