@@ -1530,13 +1530,13 @@ a {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  color: #000; }
+  color: #818fa5 !important; }
   @media (max-width: 767px) {
     .slick-arrow {
       display: none !important; } }
-  .slick-arrow.prev {
-    left: 20px; }
-  .slick-arrow.next {
+  .slick-arrow.slick-prev {
+    left: -40px; }
+  .slick-arrow.slick-next {
     right: 20px; }
   .slick-arrow i {
     font-size: 60px !important;
@@ -1706,7 +1706,7 @@ a {
 .pb_slide_v2 .slick-arrow.prev {
   left: -50px; }
 
-.pb_slide_v2 .slick-arrow.next {
+.pb_slide_v2 .slick-arrow.slick-next {
   right: -50px; }
 
 .overflow-hidden {

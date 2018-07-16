@@ -3,31 +3,36 @@
   "title": "Servicios",
   "services": [
     {
-      "title": "Gestión Empresarial",
+      "title": "Gestión en Desarrollo Organizacional",
       "css_class": "card-fb-img-5",
       "icon": "flaticon-027-creative",
       "content": [
-        "Incubadora de Empresas",
-        "Controlando la Producción",
-        "Organizando las Actividades",
-        "Administrando mi Empresa",
-        "Líder de mi Negocio",
-        "El Capital Humano",
-        "El Mercado y las Ventas",
-        "Controlando las Finanza"
+        "Estructura organizacional: descripciones de actividades, perfiles de puestos",
+        "Clima laboral",
+        "Evaluación de desempeño",
+        "Sistemas de administración de sueldos y salarios",
+        "Políticas organizacionales (finanzas, ventas, operación)",
+        "Control financiero (presupuestos)",
+        "Plan de negocio, plan de ventas, plan de producción",
+        "Programas de trabajo (operación, producción, logística)",
+        "Costos organizacionales",
+        "Indicadores de productividad"
       ]
     },
     {
-      "title": "Gestión de la Calidad",
+      "title": "Atracción de talento",
       "css_class": "card-fb-img-6",
-      "icon": "flaticon-014-policy",
+      "icon": "flaticon-021-human-resources",
       "content": [
-        "Producción Esbelta",
-        "Cero Errores (Six Sigma)",
-        "Calidad del Servicio",
-        "Evento Kaizen",
-        "Mejora Continua",
-        "Normas de Calidad"
+        "Reclutamiento y selección",
+        "Publicación de vacantes",
+        "Búsqueda de talento",
+        "Análisis de currículo",
+        "Entrevistas",
+        "Baterías de psicométricos",
+        "Estudios socioeconómicos",
+        "Asesoría en contratación",
+        "Asesoría en inducción"
       ]
     },
     {
@@ -35,38 +40,42 @@
       "css_class": "card-fb-img-5",
       "icon": "flaticon-015-strategy",
       "content": [
-        "Acelerar el crecimiento de la empresa",
-        "Desarrollo de los Caminos del Negocio",
-        "Impulsar la Tecnología",
-        "Construir el Futuro",
-        "Impulsar la Innovación",
-        "Institucionalización del Negocio",
-        "Ética del Negocio"
+        "Planes estratégicos",
+        "BCM",
+        "Mapeo estratégico",
+        "Empresas socialmente responsables",
+        "Planes de inversión",
+        "Aceleración del negocio",
+        "Institucionalización"
       ]
     },
     {
-      "title": "Alianzas Productivas",
+      "title": "Gestión de Calidad",
       "css_class": "card-fb-img-6",
-      "icon": "flaticon-028-connection",
+      "icon": "flaticon-014-policy",
       "content": [
-        "Articulación de Empresarios para la Realización de Proyecto Productivos",
-        "Formación de Articuladores",
-        "Creación de Redes de Negocio",
-        "Desarrollo de Proveedores",
-        "Conferencias sobre Alianzas Productivas"
+        "Eventos Kaizen",
+        "Calidad en el servicio",
+        "Filosofía de calidad",
+        "Procesos esbeltos",
+        "Mejora continua",
+        "Apoyos en procesos ISO",
+        "Seguridad industrial"
       ]
     },
     {
-      "title": "Administración de Proyectos",
+      "title": "Capacitación",
       "css_class": "card-fb-img-5",
-      "icon": "flaticon-018-balance",
+      "icon": "flaticon-016-speech",
       "content": [
-        "Planes de Negocio",
-        "Elaboración de Proyectos Productivos",
-        "Alianzas de Negocios",
-        "Estudios de Mercado",
-        "Diagnósticos Empresariales",
-        "Planes Estratégicos"
+        "Ventas",
+        "Servicio al cliente",
+        "Dirección estratégica",
+        "Administración de proyectos",
+        "Integración de equipos",
+        "Cambio organizacional",
+        "Sensibilización al cambio",
+        "Administración de RH"
       ]
     }
   ]
