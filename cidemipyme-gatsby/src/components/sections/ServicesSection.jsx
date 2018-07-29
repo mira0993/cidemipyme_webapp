@@ -26,23 +26,35 @@ class ServicesSection extends React.Component {
     data: PropTypes.shape(ServicesPropType).isRequired
   }
 
+  getArrow(side) {
+    return (
+      <div>
+        <i className={`flaticon ion-ios-arrow-${side}`}/>
+      </div>
+    );
+  }
+
   render() {
-    let sliderSettings = {
+    const sliderSettings = {
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      arrows: true,
+      nextArrow: this.getArrow('right'),
+      prevArrow: this.getArrow('left'),
     };
 
-    let cards = this.props.data.services.map(
+    const cards = this.props.data.services.map(
       (service, index) => (
         <SlideCard
           cssClassImage={service.css_class}
           icon={service.icon}
           title={service.title}
           content={service.content}
-          keyPrefix={servicesKeyPrefix} />
+          key={`${servicesKeyPrefix}slidecard${index}_`}
+          keyPrefix={`${servicesKeyPrefix}slidecard${index}_`} />
       ));
 
     return (
