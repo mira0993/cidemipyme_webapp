@@ -28,7 +28,6 @@ HTML_MESSAGE = '''
 
 
 def send_email(event, context):
-    print(event)
     subject_email = event['subject']
     from_email = event['email']
     text = event['message']

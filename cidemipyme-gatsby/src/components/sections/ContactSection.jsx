@@ -59,7 +59,6 @@ class ContactSection extends React.Component {
       });
     } else {
       window.$ = window.jQuery=jquery;
-      const that = this;
 
       $.post(
         this.props.data.url,
@@ -68,8 +67,8 @@ class ContactSection extends React.Component {
           email: this.state.emailText,
           message: this.state.messageText
         })
-      ).done(function(data) {
-        that.setState({
+      ).done((data) => {
+        this.setState({
           showSentMessage: true,
           showErrors: false,
           emailText: '',
@@ -77,11 +76,10 @@ class ContactSection extends React.Component {
           messageText: '',
           showSentErrorMessage: false,
         });
-      }).fail(function(err) {
-        that.setState({
+      }).fail((err) => {
+        this.setState({
           showSentErrorMessage: true,
         })
-        console.error(err);
       });
     }
   }
