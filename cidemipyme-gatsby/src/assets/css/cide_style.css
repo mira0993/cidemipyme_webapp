@@ -99,12 +99,24 @@
   max-height: 80px;
 }
 
-.card-fb-img-5 {
-  background-image: url("../images/cide_fb_5.jpg");
+.card-services-img-1 {
+  background-image: url("../images/cide_services_4.jpg");
 }
 
-.card-fb-img-6 {
+.card-services-img-2 {
   background-image: url("../images/cide_fb_6.jpg");
+}
+
+.card-services-img-3 {
+  background-image: url("../images/cide_services_2.jpg");
+}
+
+.card-services-img-4 {
+  background-image: url("../images/cide_services_1.jpg");
+}
+
+.card-services-img-5 {
+  background-image: url("../images/cide_services_3.jpg");
 }
 
 .row-padding-top-30 {
