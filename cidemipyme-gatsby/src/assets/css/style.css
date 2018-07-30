@@ -1549,7 +1549,7 @@ a {
 
 .slick-dots {
   position: absolute;
-  bottom: -40px;
+  top: -20px;
   z-index: 1;
   list-style: none;
   display: block;
@@ -1558,11 +1558,6 @@ a {
   margin: 0;
   width: 100%;
 }
-  @media (max-width: 767px) {
-    .slick-dots {
-      top: -20px;
-    }
-  }
   .slick-dots li {
     position: relative;
     display: inline-block;

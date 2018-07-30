@@ -23,11 +23,11 @@ export default ({data}) => {
                 <div
                   className="fb-like"
                   data-href={data.site.siteMetadata.fbcide}
-                  data-layout="standard"
+                  data-layout="button_count"
                   data-action="recommend"
                   data-size="large"
                   data-show-faces="true"
-                  data-share="false">
+                  data-share="true">
                 </div>
               </div>
             </div>
