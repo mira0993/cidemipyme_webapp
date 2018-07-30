@@ -4,7 +4,7 @@ module.exports = {
     slogan: 'Hacemos Negocio su Negocio',
     fbcide: 'https://www.facebook.com/cidemipyme',
     fbcce: 'https://www.facebook.com/circulodecrecimiento',
-    fbcidetalento: 'https://www.facebook.com/cidetalento'
+    fbcidetalento: 'https://www.facebook.com/cidetalento',
   },
   plugins: [
     {

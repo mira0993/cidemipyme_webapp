@@ -6,6 +6,7 @@ import ServicesSection from 'sections/ServicesSection.jsx';
 import MethodologiesSection from 'sections/MethodologiesSection.jsx';
 import ContactSection from 'sections/ContactSection.jsx';
 import ClientsSection from 'sections/ClientsSection.jsx';
+import FooterSection from 'sections/FooterSection.jsx';
 
 export default ({data}) => {
   return (
@@ -42,6 +43,9 @@ export default ({data}) => {
       <ContactSection
         data={data.contact}
         script={data.send_message_script.edges[0].node.publicURL}/>
+      <FooterSection
+        companyName={data.site.siteMetadata.title}
+        fbURL={data.site.siteMetadata.fbcide}/>
     </div>
   );
 }
@@ -52,6 +56,7 @@ export const homeQuery = graphql`
       siteMetadata {
         title
         slogan
+        fbcide
       }
     }
     about: informationJson(id:{eq:"about_section"}) {
