@@ -17,7 +17,6 @@ import 'css/style.css'
 import 'css/cide_style.css'
 
 import logo_120 from 'images/logo_120.png'
-import building from 'images/building.jpg'
 
 // const TemplateWrapper = ({ children }) => (
 //   <div>

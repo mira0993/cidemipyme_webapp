@@ -42,14 +42,30 @@ module.exports = class HTML extends React.Component {
           {css}
         </head>
         <body {...this.props.bodyAttributes}>
+          <div id="fb-root"></div>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.1&appId=212011879637045&autoLogAppEvents=1';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+              `,
+            }}
+          />
           {this.props.preBodyComponents}
           <div
             key={`body`}
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
+
           {this.props.postBodyComponents}
         </body>
+
       </html>
     )
   }

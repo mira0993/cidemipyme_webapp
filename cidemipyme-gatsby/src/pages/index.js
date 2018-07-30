@@ -11,7 +11,7 @@ export default ({data}) => {
   return (
     <div>
       <section
-        className="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4 home-section"
+        className="pb_cover_v1 text-left home-section"
         id="section-home">
         <div className="container">
           <div className="row align-items-center justify-content-end">
@@ -19,6 +19,15 @@ export default ({data}) => {
               <h2 className="heading mb-3">{data.site.siteMetadata.title}</h2>
               <div className="sub-heading">
                 <p className="mb-5">{data.site.siteMetadata.slogan}</p>
+                <div
+                  className="fb-like"
+                  data-href={data.site.siteMetadata.fbcide}
+                  data-layout="standard"
+                  data-action="recommend"
+                  data-size="large"
+                  data-show-faces="true"
+                  data-share="false">
+                </div>
               </div>
             </div>
           </div>

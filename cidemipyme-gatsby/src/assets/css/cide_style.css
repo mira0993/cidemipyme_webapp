@@ -21,12 +21,12 @@
 }
 
 .home-section {
-  background-color:rgb(239, 245, 255);
-  background-image: url("../images/cide_fb_7.jpg");
+  background-color: #01142d;
+  background-image: url("../images/cide_fb_7.png");
   vertical-align: top;
   height:100%;
   box-shadow: 2px 2px 2px;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .card-box {
