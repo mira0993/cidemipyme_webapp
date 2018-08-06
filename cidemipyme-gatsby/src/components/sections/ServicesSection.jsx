@@ -62,7 +62,7 @@ class ServicesSection extends React.Component {
         <Container>
           <Row>
             <Col lg={12} md={12} sm={0}>
-              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
+              <h2 className="mt-0 heading-border-top mb-4 font-weight-normal">
                 {this.props.data.title}
               </h2>
             </Col>

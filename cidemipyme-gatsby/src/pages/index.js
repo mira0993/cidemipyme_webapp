@@ -6,12 +6,13 @@ import ServicesSection from 'sections/ServicesSection.jsx';
 import MethodologiesSection from 'sections/MethodologiesSection.jsx';
 import ContactSection from 'sections/ContactSection.jsx';
 import ClientsSection from 'sections/ClientsSection.jsx';
+import FooterSection from 'sections/FooterSection.jsx';
 
 export default ({data}) => {
   return (
     <div>
       <section
-        className="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4 home-section"
+        className="pb_cover_v1 text-left home-section"
         id="section-home">
         <div className="container">
           <div className="row align-items-center justify-content-end">
@@ -19,6 +20,15 @@ export default ({data}) => {
               <h2 className="heading mb-3">{data.site.siteMetadata.title}</h2>
               <div className="sub-heading">
                 <p className="mb-5">{data.site.siteMetadata.slogan}</p>
+                <div
+                  className="fb-like"
+                  data-href={data.site.siteMetadata.fbcide}
+                  data-layout="button_count"
+                  data-action="recommend"
+                  data-size="large"
+                  data-show-faces="true"
+                  data-share="true">
+                </div>
               </div>
             </div>
           </div>
@@ -33,6 +43,9 @@ export default ({data}) => {
       <ContactSection
         data={data.contact}
         script={data.send_message_script.edges[0].node.publicURL}/>
+      <FooterSection
+        companyName={data.site.siteMetadata.title}
+        fbURL={data.site.siteMetadata.fbcide}/>
     </div>
   );
 }
@@ -43,6 +56,7 @@ export const homeQuery = graphql`
       siteMetadata {
         title
         slogan
+        fbcide
       }
     }
     about: informationJson(id:{eq:"about_section"}) {

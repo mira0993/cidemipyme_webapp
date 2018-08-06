@@ -4,7 +4,7 @@
   "services": [
     {
       "title": "Gestión en Desarrollo Organizacional",
-      "css_class": "card-fb-img-5",
+      "css_class": "card-services-img-1",
       "icon": "flaticon-027-creative",
       "content": [
         "Estructura organizacional: descripciones de actividades, perfiles de puestos",
@@ -21,7 +21,7 @@
     },
     {
       "title": "Atracción de talento",
-      "css_class": "card-fb-img-6",
+      "css_class": "card-services-img-2",
       "icon": "flaticon-021-human-resources",
       "content": [
         "Reclutamiento y selección",
@@ -37,7 +37,7 @@
     },
     {
       "title": "Gestión Estratégica",
-      "css_class": "card-fb-img-5",
+      "css_class": "card-services-img-3",
       "icon": "flaticon-015-strategy",
       "content": [
         "Planes estratégicos",
@@ -51,7 +51,7 @@
     },
     {
       "title": "Gestión de Calidad",
-      "css_class": "card-fb-img-6",
+      "css_class": "card-services-img-4",
       "icon": "flaticon-014-policy",
       "content": [
         "Eventos Kaizen",
@@ -65,7 +65,7 @@
     },
     {
       "title": "Capacitación",
-      "css_class": "card-fb-img-5",
+      "css_class": "card-services-img-5",
       "icon": "flaticon-016-speech",
       "content": [
         "Ventas",
