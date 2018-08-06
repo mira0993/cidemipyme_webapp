@@ -67,7 +67,7 @@ class AboutSection extends React.Component {
           <Row>
             <Col lg={12} md={12} sm={0}>
               <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
-                {'Mision'}
+                {'Misión'}
               </h2>
               {this.renderParagraphs(this.props.data['mision'], 'mision')}
             </Col>
