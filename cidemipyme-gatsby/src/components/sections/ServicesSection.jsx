@@ -22,10 +22,6 @@ const ServicesPropType = {
 const servicesKeyPrefix = 'servicesSection_';
 
 class ServicesSection extends React.Component {
-  static propTypes = {
-    data: PropTypes.shape(ServicesPropType).isRequired
-  }
-
   getArrow(side) {
     return (
       <div>
@@ -81,6 +77,10 @@ class ServicesSection extends React.Component {
 }
 
 export default ServicesSection;
+
+ServicesSection.propTypes = {
+  data: PropTypes.shape(ServicesPropType).isRequired
+}
 
 export const GraphQlServicesSectionFragment = graphql `
 fragment ServicesSectionFragment on InformationJson {

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'CIDEMiPyMe',
+    title: 'CIDEMIPYME',
     slogan: 'Hacemos Negocio su Negocio',
     fbcide: 'https://www.facebook.com/cidemipyme',
     fbcce: 'https://www.facebook.com/circulodecrecimiento',

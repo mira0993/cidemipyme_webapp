@@ -1,9 +1,8 @@
 {
   "id": "work_section",
-  "title": "¿Qué hacemos?",
+  "title": "¿Qué Hacemos?",
   "work_items": [
     {
-      "title": "Se crean",
       "icon": "flaticon-020-idea",
       "items": [
         "Capacitación a emprendedores",
@@ -13,7 +12,6 @@
       ]
     },
     {
-      "title": "Se impulsan",
       "icon": "flaticon-007-startup",
       "items": [
         "Diagnóstico Organizacional DO",
@@ -23,7 +21,6 @@
       ]
     },
     {
-      "title": "Se mejoran",
       "icon": "flaticon-010-website-1",
       "items": [
         "Capacitación",
@@ -32,7 +29,6 @@
       ]
     },
     {
-      "title": "Se hacen crecer",
       "icon": "flaticon-023-business",
       "items": [
         "Consultoría en Estrategia de Negocio",

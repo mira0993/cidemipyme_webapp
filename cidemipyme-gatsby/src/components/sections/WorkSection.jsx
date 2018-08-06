@@ -11,7 +11,6 @@ import cideServices from 'images/cide_services.png';
 const workKeyPrefix = 'workSection_';
 
 const WorkInnerItemPropType = {
-  title: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
@@ -22,7 +21,7 @@ const WorkPropType = {
 }
 
 class WorkSection extends React.Component {
-  createWorkCard(title, icon, items, key) {
+  createWorkCard(icon, items, key) {
     const textItems = items.map((text, index) => (
       <li key={`${key}_text_${index}`}>{text}</li>
     ));
@@ -33,12 +32,9 @@ class WorkSection extends React.Component {
             <i className={`flaticon ${icon}`}/>
           </div>
           <div className="media-body">
-          <h3 className="mt-0 pb_font-17">
-            {title}
-          </h3>
-          <ul className="pb_font-14">
-            {textItems}
-          </ul>
+            <ul className="pb_font-14">
+              {textItems}
+            </ul>
           </div>
         </div>
       </Col>
@@ -48,7 +44,6 @@ class WorkSection extends React.Component {
   render() {
     const cards = this.props.data.work_items.map((item, index) => (
       this.createWorkCard(
-        item.title,
         item.icon,
         item.items,
         `${workKeyPrefix}card_${index}`
@@ -89,7 +84,6 @@ export const GraphQlWorkSectionFragment = graphql `
   fragment WorkSectionFragment on InformationJson {
     title
     work_items {
-      title
       icon
       items
     }
