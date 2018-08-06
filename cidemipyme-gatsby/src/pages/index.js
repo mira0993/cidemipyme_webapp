@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  Col,
+  Container,
+  Row
+} from 'reactstrap';
 import AboutSection from 'sections/AboutSection.jsx';
 import CoparmexSection from 'sections/CoparmexSection.jsx';
 import WorkSection from 'sections/WorkSection.jsx';
@@ -14,10 +19,10 @@ export default ({data}) => {
       <section
         className="pb_cover_v1 text-left home-section"
         id="section-home">
-        <div className="container">
-          <div className="row align-items-center justify-content-end">
-            <div className="col-md-6  order-md-1">
-              <h2 className="heading mb-3">{data.site.siteMetadata.title}</h2>
+        <Container>
+          <Row className="align-items-center justify-content-end">
+            <Col md={{ size: 6, order: 1}}>
+              <h2 className="heading mb-3 home-title">{data.site.siteMetadata.title}</h2>
               <div className="sub-heading">
                 <p className="mb-5">{data.site.siteMetadata.slogan}</p>
                 <div
@@ -27,12 +32,11 @@ export default ({data}) => {
                   data-action="recommend"
                   data-size="large"
                   data-show-faces="true"
-                  data-share="true">
-                </div>
+                  data-share="true"/>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </section>
       <AboutSection data={data.about}/>
       <ClientsSection/>
