@@ -26,7 +26,7 @@ class WorkSection extends React.Component {
       <li key={`${key}_text_${index}`}>{text}</li>
     ));
     return (
-      <Col md={6}>
+      <Col md={6} key={`${key}_work_card`}>
         <div className="media pb_media_v1 mb-5">
           <div className="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary">
             <i className={`flaticon ${icon}`}/>
