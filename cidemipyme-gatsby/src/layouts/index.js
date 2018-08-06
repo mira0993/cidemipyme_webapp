@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Nav, NavItem, NavLink } from 'reactstrap';
 import NavMenu from 'components/NavMenu.jsx';
 import LogoHeader from 'components/LogoHeader.jsx';
 

@@ -4,19 +4,11 @@ import PropTypes from 'prop-types';
 const slideCardPrefix = 'slide_card_';
 
 class SlideCard extends React.Component {
-  static propTypes = {
-    cssClassImage: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    content: PropTypes.arrayOf(PropTypes.string).isRequired,
-    keyPrefix: PropTypes.string.isRequired,
-  }
-
   renderContent() {
     return this.props.content.map( (text, index) => {
       return (
-        <div>
-          <p key={`${this.props.keyPrefix}${slideCardPrefix}${index}`}>{text}</p>
+        <div key={`${this.props.keyPrefix}${slideCardPrefix}${index}`}>
+          <p>{text}</p>
         </div>
       );
     });
@@ -41,3 +33,11 @@ class SlideCard extends React.Component {
 }
 
 export default SlideCard;
+
+SlideCard.propTypes = {
+  cssClassImage: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.arrayOf(PropTypes.string).isRequired,
+  keyPrefix: PropTypes.string.isRequired
+}

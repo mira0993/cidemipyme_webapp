@@ -1,12 +1,10 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import {
   Container,
   Row,
   Col,
   Card,
-  CardBody,
   CardText,
   CardDeck
 } from 'reactstrap';
@@ -19,10 +17,6 @@ const AboutPropTypes = {
 }
 
 class AboutSection extends React.Component {
-  static propTypes = {
-    data: PropTypes.shape(AboutPropTypes).isRequired
-  }
-
   renderParagraphs(paragraphs, keyPrefix) {
     return paragraphs.map(
     (paragraph, index) => {
@@ -89,6 +83,10 @@ class AboutSection extends React.Component {
 }
 
 export default AboutSection;
+
+AboutSection.propTypes = {
+  data: PropTypes.shape(AboutPropTypes).isRequired
+}
 
 export const GraphQlAboutSectionFragment = graphql `
   fragment AboutSectionFragment on InformationJson {
