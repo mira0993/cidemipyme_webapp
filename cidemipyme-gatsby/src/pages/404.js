@@ -1,10 +1,27 @@
-import React from 'react'
+import React from 'react';
+import {
+  Col,
+  Container,
+  Row
+} from 'reactstrap';
 
 const NotFoundPage = () => (
   <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <section className="pb_section">
+      <Container>
+        <Row style={{paddingTop: '3em'}}>
+          <Col>
+            <h3>Lo sentimos. No hemos encontrado el contenido que buscas.</h3>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <a href="/">Vuelve a la página de Inicio</a>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   </div>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
