@@ -7,10 +7,6 @@ import {
 } from 'reactstrap';
 
 class FooterSection extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const currentYear = new Date().getFullYear();
     return (
