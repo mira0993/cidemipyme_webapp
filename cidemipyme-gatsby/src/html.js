@@ -32,10 +32,10 @@ module.exports = class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <meta property="og:title" content="CIDEMiPyMe" />
-          <meta property="og:description" content="Hacemos negocio su negocio" />
+          <meta property="og:title" content="CIDEMIPYME" />
+          <meta property="og:description" content="Hacemos Negocio su Negocio" />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="http://cidemipyme1.s3-website-us-west-2.amazonaws.com/" />
+          <meta property="og:url" content="http://www.cidemipymes.com.mx/" />
           <meta property="og:image" content={preview} />
           <link rel="icon" href={favicon}/>
           {this.props.headComponents}

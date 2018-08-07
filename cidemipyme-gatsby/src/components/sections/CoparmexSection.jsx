@@ -54,9 +54,9 @@ class CoparmexSection extends React.Component {
     return(
       <section id="section-coparmex" className="pb_section bg-light">
         <Container>
-          <Row>
+          <Row className="section-header">
             <Col sm={10}>
-              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal section-header">
+              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
                 {this.props.data.title}
               </h2>
             </Col>
