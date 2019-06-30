@@ -14,13 +14,13 @@ import 'css/helpers.css';
 import 'css/style.css';
 import 'css/cide_style.css';
 
-import logo_120 from 'images/logo_120.png';
+import logo_120 from 'images/logo_cide_2019.png';
 
 const TemplateWrapper = ({ children, data }) => (
   <div>
     <NavMenu logo={<LogoHeader
                     altImage={data['site']['siteMetadata']['title']}
-                    imagePath={logo_120} height={'48px'}/>
+                    imagePath={logo_120} height={'40px'}/>
                   }
               items={data['menusJson']['items']}/>
     {children()}
