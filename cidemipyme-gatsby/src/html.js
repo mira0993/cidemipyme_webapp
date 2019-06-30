@@ -1,5 +1,5 @@
 import React from "react"
-import favicon from 'images/logo_favicon_32.png';
+import favicon from 'images/logo_cide_2019_favicon_32.png';
 import preview from 'images/page_preview.png';
 
 
