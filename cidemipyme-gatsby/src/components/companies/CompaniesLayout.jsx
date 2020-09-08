@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CompanySearchBar from 'companies/CompanySearchBar.jsx';
+import EditModalCompany from 'companies/EditCompanyModal.jsx';
+
 import {
   Navbar,
   NavbarBrand,
@@ -43,7 +45,7 @@ class CompaniesLayout extends React.Component {
               <CompanySearchBar/>
             </NavItem>
             <NavItem className="company-new-item-btn">
-              <Button color="primary">New</Button>
+              <EditModalCompany/>
             </NavItem>
           </Collapse>
         </Navbar>
