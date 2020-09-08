@@ -12,6 +12,7 @@ exports.modifyWebpackConfig = ({ config, env }) => {
       alias: {
         images: path.resolve(__dirname, 'src/assets/images'),
         components: path.resolve(__dirname, 'src/components'),
+        companies: path.resolve(__dirname, 'src/components/companies'),
         sections: path.resolve(__dirname, 'src/components/sections'),
         fonts: path.resolve(__dirname, 'src/assets/fonts'),
         css: path.resolve(__dirname, 'src/assets/css'),

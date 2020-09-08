@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NavMenu from 'components/NavMenu.jsx';
 import LogoHeader from 'components/LogoHeader.jsx';
+import CompaniesLayout from 'companies/CompaniesLayout.jsx';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'fonts/googleapis-font.css';
@@ -16,16 +17,30 @@ import 'css/cide_style.css';
 
 import logo_120 from 'images/logo_cide_2019.png';
 
-const TemplateWrapper = ({ children, data }) => (
-  <div>
-    <NavMenu logo={<LogoHeader
-                    altImage={data['site']['siteMetadata']['title']}
-                    imagePath={logo_120} height={'40px'}/>
-                  }
-              items={data['menusJson']['items']}/>
-    {children()}
-  </div>
-);
+const TemplateWrapper = ({ location, children, data }) =>
+  location.pathname === '/' ? (
+    <div>
+      <NavMenu
+        logo={
+          <LogoHeader
+            altImage={data['site']['siteMetadata']['title']}
+            imagePath={logo_120} height={'40px'}/>
+        }
+        items={data['menusJson']['items']}/>
+      {children()}
+    </div>
+  ) : (
+    <div>
+      <CompaniesLayout
+        logo={
+          <LogoHeader
+            altImage={data['site']['siteMetadata']['title']}
+            imagePath={logo_120} height={'30px'}/>
+        }
+        path={location.pathname}/>
+      {children()}
+    </div>
+  );
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,

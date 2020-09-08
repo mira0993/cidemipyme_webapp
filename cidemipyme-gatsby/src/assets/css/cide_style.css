@@ -247,3 +247,14 @@
     width: 100%;
   }
 }
+
+.company-search-bar {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  list-style-type: none;
+}
+
+.company-new-item-btn {
+  list-style-type: none;
+}
