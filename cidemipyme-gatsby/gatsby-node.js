@@ -6,8 +6,8 @@
 
 const path = require('path')
 
-exports.modifyWebpackConfig = ({ config, env }) => {
-  config.merge({
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
     resolve: {
       alias: {
         images: path.resolve(__dirname, 'src/assets/images'),
@@ -15,9 +15,11 @@ exports.modifyWebpackConfig = ({ config, env }) => {
         sections: path.resolve(__dirname, 'src/components/sections'),
         fonts: path.resolve(__dirname, 'src/assets/fonts'),
         css: path.resolve(__dirname, 'src/assets/css'),
+        js: path.resolve(__dirname, 'src/assets/js'),
       }
+    },
+    externals: {
+      jquery: 'jQuery', // important: 'Q' capitalized
     }
-  });
-
-  return config;
+  })
 }

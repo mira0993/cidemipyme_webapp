@@ -7,10 +7,11 @@ import MethodologiesSection from 'sections/MethodologiesSection.jsx';
 import ContactSection from 'sections/ContactSection.jsx';
 import ClientsSection from 'sections/ClientsSection.jsx';
 import FooterSection from 'sections/FooterSection.jsx';
+import Layout from 'components/Layout.js';
 
 export default ({data}) => {
   return (
-    <div>
+    <Layout>
       <section
         className="pb_cover_v1 text-left home-section"
         id="section-home">
@@ -46,7 +47,7 @@ export default ({data}) => {
       <FooterSection
         companyName={data.site.siteMetadata.title}
         fbURL={data.site.siteMetadata.fbcide}/>
-    </div>
+    </Layout>
   );
 }
 

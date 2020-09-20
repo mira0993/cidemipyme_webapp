@@ -19,6 +19,10 @@ const ServicesPropType = {
   services: PropTypes.arrayOf(PropTypes.shape(ServiceItemPropType)).isRequired,
 }
 
+const SlickButtonFix = ({currentSlide, slideCount, side, ...props}) => (
+    <span {...props}><i className={`flaticon ion-ios-arrow-${side}`}/></span>
+);
+
 const servicesKeyPrefix = 'servicesSection_';
 
 class ServicesSection extends React.Component {
@@ -37,9 +41,6 @@ class ServicesSection extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: true,
-      nextArrow: this.getArrow('right'),
-      prevArrow: this.getArrow('left'),
     };
 
     const cards = this.props.data.services.map(

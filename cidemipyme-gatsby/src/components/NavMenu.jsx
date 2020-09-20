@@ -21,7 +21,7 @@ class NavMenu extends React.Component {
   createItem(item) {
     return (
       <NavItem key={item.name}>
-        <NavLink href={`#${item.url}`} className="menu-link"
+        <NavLink href={`#${item.url}`} className="menu-link js-scroll-trigger"
           onClick={this.toggleNavbar.bind(this)}>
           {item.name}
         </NavLink>
@@ -50,7 +50,7 @@ class NavMenu extends React.Component {
     return (
 
         <Navbar fixed="top" color="white" className="navbar-expand-lg card-box">
-          <NavbarBrand href="#" className="mr-auto">{this.props.logo}</NavbarBrand>
+          <NavbarBrand href="#" className="mr-auto js-scroll-trigger">{this.props.logo}</NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar.bind(this)} className="mr2">
             <i className="ion-navicon"></i>
           </NavbarToggler>
