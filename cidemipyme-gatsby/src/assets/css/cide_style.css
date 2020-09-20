@@ -10,14 +10,15 @@
   color: #868e96 !important;
 }
 
+/* #1d82ff */
 .active a {
-  color: #1d82ff !important;
+  color: #2DC497 !important;
 }
 .active a:active {
-  color: #1d82ff !important;
+  color: #2DC497 !important;
 }
 .active a:hover {
-  color: #1d82ff !important;
+  color: #2DC497 !important;
 }
 
 .home-section {
@@ -245,4 +246,16 @@
   .services-image {
     width: 100%;
   }
+}
+
+.strategy-icon {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 14px;
+  margin-top: 10px;
+  font-size: 75px;
+}
+
+.icon-primary-color {
+  color: #2DC497;
 }

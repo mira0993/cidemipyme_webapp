@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import AboutSection from 'sections/AboutSection.jsx';
-import CoparmexSection from 'sections/CoparmexSection.jsx';
+import StrategicAlliesSection from 'sections/StrategicAlliesSection.jsx';
 import WorkSection from 'sections/WorkSection.jsx';
 import ServicesSection from 'sections/ServicesSection.jsx';
 import MethodologiesSection from 'sections/MethodologiesSection.jsx';
@@ -25,8 +25,8 @@ const homeQuery = graphql`
     work: informationJson(id:{eq:"work_section"}) {
       ...WorkSectionFragment
     }
-    coparmex: informationJson(id: {eq:"coparmex_section"}) {
-      ...CoparmexSectionFragment
+    strategic_allies: informationJson(id: {eq:"strategic_allies_section"}) {
+      ...StrategicAlliesFragment
     }
     methodologies: informationJson(id:{eq:"methodologies_section"}) {
       ...MethodologiesSectionFragment
@@ -75,8 +75,7 @@ export default () => {
         </div>
       </section>
       <AboutSection data={data.about}/>
-      <ClientsSection/>
-      <CoparmexSection data={data.coparmex}/>
+      <StrategicAlliesSection {...data.strategic_allies}/>
       <WorkSection data={data.work}/>
       <MethodologiesSection data={data.methodologies}/>
       <ServicesSection data={data.services}/>
