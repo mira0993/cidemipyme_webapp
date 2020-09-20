@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from "gatsby"
 import AboutSection from 'sections/AboutSection.jsx';
 import CoparmexSection from 'sections/CoparmexSection.jsx';
 import WorkSection from 'sections/WorkSection.jsx';
@@ -9,7 +10,45 @@ import ClientsSection from 'sections/ClientsSection.jsx';
 import FooterSection from 'sections/FooterSection.jsx';
 import Layout from 'components/Layout.js';
 
-export default ({data}) => {
+const homeQuery = graphql`
+  query queryHomeData {
+    site {
+      siteMetadata {
+        title
+        slogan
+        fbcide
+      }
+    }
+    about: informationJson(id:{eq:"about_section"}) {
+      ...AboutSectionFragment
+    }
+    work: informationJson(id:{eq:"work_section"}) {
+      ...WorkSectionFragment
+    }
+    coparmex: informationJson(id: {eq:"coparmex_section"}) {
+      ...CoparmexSectionFragment
+    }
+    methodologies: informationJson(id:{eq:"methodologies_section"}) {
+      ...MethodologiesSectionFragment
+    }
+    services: informationJson(id:{eq:"services_section"}) {
+      ...ServicesSectionFragment
+    }
+    contact: informationJson(id:{eq:"contact_section"}) {
+      ...ContactSectionFragment
+    }
+    send_message_script: allFile(filter: { name: { eq: "send_email" } }) {
+      edges {
+        node {
+          publicURL
+        }
+      }
+    }
+  }
+`;
+
+export default () => {
+  const data = useStaticQuery(homeQuery);
   return (
     <Layout>
       <section
@@ -51,39 +90,4 @@ export default ({data}) => {
   );
 }
 
-export const homeQuery = graphql`
-  query queryHomeData {
-    site {
-      siteMetadata {
-        title
-        slogan
-        fbcide
-      }
-    }
-    about: informationJson(id:{eq:"about_section"}) {
-      ...AboutSectionFragment
-    }
-    work: informationJson(id:{eq:"work_section"}) {
-      ...WorkSectionFragment
-    }
-    coparmex: informationJson(id: {eq:"coparmex_section"}) {
-      ...CoparmexSectionFragment
-    }
-    methodologies: informationJson(id:{eq:"methodologies_section"}) {
-      ...MethodologiesSectionFragment
-    }
-    services: informationJson(id:{eq:"services_section"}) {
-      ...ServicesSectionFragment
-    }
-    contact: informationJson(id:{eq:"contact_section"}) {
-      ...ContactSectionFragment
-    }
-    send_message_script: allFile(filter: { name: { eq: "send_email" } }) {
-      edges {
-        node {
-          publicURL
-        }
-      }
-    }
-  }
-`;
+

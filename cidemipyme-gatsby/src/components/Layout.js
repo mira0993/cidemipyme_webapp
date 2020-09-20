@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql, withPrefix } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from 'prop-types';
 import NavMenu from 'components/NavMenu.jsx';
 import LogoHeader from 'components/LogoHeader.jsx';

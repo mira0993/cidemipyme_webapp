@@ -15,11 +15,10 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
         sections: path.resolve(__dirname, 'src/components/sections'),
         fonts: path.resolve(__dirname, 'src/assets/fonts'),
         css: path.resolve(__dirname, 'src/assets/css'),
-        js: path.resolve(__dirname, 'src/assets/js'),
       }
     },
     externals: {
-      jquery: 'jQuery', // important: 'Q' capitalized
+      jquery: 'jQuery',
     }
   })
 }
