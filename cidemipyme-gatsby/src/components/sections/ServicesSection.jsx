@@ -39,7 +39,6 @@ class ServicesSection extends React.Component {
     const sliderSettings = {
       dots: true,
       infinite: true,
-      speed: 200,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
