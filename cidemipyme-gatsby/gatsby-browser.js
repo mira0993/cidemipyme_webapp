@@ -5,10 +5,6 @@
  */
 
 export const onInitialClientRender = () => {
-    $(document).ready(function () {
-        console.log("The answer is don't think about it!")
-    });
-
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);

@@ -17,8 +17,13 @@ class FooterSection extends React.Component {
             <Col>
               <ul className="list-inline">
                 <li className="list-inline-item">
-                  <a href={this.props.fbURL} className="p-2" target="_blank">
-                    <i className="fa fa-facebook"/>
+                  <a href={this.props.fbURL} target="_blank">
+                    <i className="flaticon ion-social-facebook pb_font-32 icon-primary-color"/>
+                  </a>
+                </li>
+                <li className="list-inline-item">
+                  <a href={this.props.linkedinURL} target="_blank">
+                    <i className="flaticon ion-social-linkedin pb_font-32 icon-primary-color"/>
                   </a>
                 </li>
               </ul>
@@ -26,7 +31,7 @@ class FooterSection extends React.Component {
           </Row>
           <Row>
             <Col className="text-center">
-              <p className="pb_font-14">
+              <p className="pb_font-16">
                 &copy; {`${currentYear} ${this.props.companyName}`}
               </p>
             </Col>
@@ -41,5 +46,6 @@ export default FooterSection;
 
 FooterSection.propTypes = {
   companyName: PropTypes.string.isRequired,
-  fbURL: PropTypes.string.isRequired
+  fbURL: PropTypes.string.isRequired,
+  linkedinURL: PropTypes.string.isRequired
 };
