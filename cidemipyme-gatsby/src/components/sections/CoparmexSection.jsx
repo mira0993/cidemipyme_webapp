@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {graphql} from 'gatsby';
 import coparmexLogo from 'images/coparmex_jalisco.png';
 import {
   Col,

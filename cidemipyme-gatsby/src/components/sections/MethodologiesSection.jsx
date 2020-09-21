@@ -5,6 +5,7 @@ import methodology_cidetalento from 'images/metodologia_cidetalento.png';
 import methodology_growth_strategy from 'images/metodologia_estrategia_crecimiento.png';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {graphql} from 'gatsby';
 import {
   Col,
   Container,

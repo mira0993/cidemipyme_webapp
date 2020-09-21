@@ -8,6 +8,7 @@ import {
   CardText,
   CardDeck
 } from 'reactstrap';
+import {graphql} from 'gatsby';
 
 const AboutPropTypes = {
   title: PropTypes.string.isRequired,

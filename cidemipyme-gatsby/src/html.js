@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === `production`) {
   }
 }
 
-module.exports = class HTML extends React.Component {
+class HTML extends React.Component {
   render() {
     let css
     if (process.env.NODE_ENV === `production`) {
@@ -37,25 +37,28 @@ module.exports = class HTML extends React.Component {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="http://cidemipyme1.s3-website-us-west-2.amazonaws.com/" />
           <meta property="og:image" content={preview} />
-          <link rel="icon" href={favicon}/>
+          <link rel="icon" href={favicon} />
+          {/* Bootstrap core JS */}
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+          {/* Third party plugin JS */}
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+          {/* Font Awesome icons (free version) */}
+          <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossOrigin="anonymous"></script>
+          {/*<!-- Google fonts-->*/}
+          <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+          {/* Third party plugin */}
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+          {/* Google fonts */}
+          <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
           {this.props.headComponents}
           {css}
         </head>
         <body {...this.props.bodyAttributes}>
           <div id="fb-root"></div>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) return;
-                  js = d.createElement(s); js.id = id;
-                  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.1&appId=212011879637045&autoLogAppEvents=1';
-                  fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-              `,
-            }}
-          />
           {this.props.preBodyComponents}
           <div
             key={`body`}
@@ -70,3 +73,5 @@ module.exports = class HTML extends React.Component {
     )
   }
 }
+
+export default HTML;
