@@ -39,9 +39,11 @@ class ServicesSection extends React.Component {
     const sliderSettings = {
       dots: true,
       infinite: true,
-      speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      arrows: true,
+      nextArrow: <SlickButtonFix side="right"/>,
+      prevArrow: <SlickButtonFix side="left" />,
     };
 
     const cards = this.props.data.services.map(

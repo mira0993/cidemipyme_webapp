@@ -28,11 +28,11 @@ class WorkSection extends React.Component {
     return (
       <Col md={6} key={`${key}_work_card`}>
         <div className="media pb_media_v1 mb-5">
-          <div className="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary">
+          <div className="icon border border-gray rounded-circle d-flex mr-3 display-4 icon-primary-color">
             <i className={`flaticon ${icon}`}/>
           </div>
           <div className="media-body">
-            <ul className="pb_font-14">
+            <ul className="pb_font-16">
               {textItems}
             </ul>
           </div>

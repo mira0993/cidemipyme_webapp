@@ -21,7 +21,7 @@ class SlideCard extends React.Component {
           <div className={`pb_content-media ${this.props.cssClassImage}`}/>
           <div className="slide_content-text text-center">
             <div className="pb_icon_v1">
-              <i className={`flaticon text-primary ${this.props.icon}`}/>
+              <i className={`flaticon icon-primary-color ${this.props.icon}`}/>
             </div>
             <h3 className="font-weight-normal mt-0 mb-4">{this.props.title}</h3>
             {this.renderContent()}

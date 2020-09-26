@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import AboutSection from 'sections/AboutSection.jsx';
-import CoparmexSection from 'sections/CoparmexSection.jsx';
+import StrategicAlliesSection from 'sections/StrategicAlliesSection.jsx';
 import WorkSection from 'sections/WorkSection.jsx';
 import ServicesSection from 'sections/ServicesSection.jsx';
 import MethodologiesSection from 'sections/MethodologiesSection.jsx';
@@ -17,6 +17,7 @@ const homeQuery = graphql`
         title
         slogan
         fbcide
+        linkedin
       }
     }
     about: informationJson(id:{eq:"about_section"}) {
@@ -25,8 +26,8 @@ const homeQuery = graphql`
     work: informationJson(id:{eq:"work_section"}) {
       ...WorkSectionFragment
     }
-    coparmex: informationJson(id: {eq:"coparmex_section"}) {
-      ...CoparmexSectionFragment
+    strategic_allies: informationJson(id: {eq:"strategic_allies_section"}) {
+      ...StrategicAlliesFragment
     }
     methodologies: informationJson(id:{eq:"methodologies_section"}) {
       ...MethodologiesSectionFragment
@@ -50,33 +51,29 @@ const homeQuery = graphql`
 export default () => {
   const data = useStaticQuery(homeQuery);
   return (
-    <Layout>
+    <Layout>   
       <section
         className="pb_cover_v1 text-left home-section"
         id="section-home">
-        <div className="container">
-          <div className="row align-items-center justify-content-end">
-            <div className="col-md-6  order-md-1">
-              <h2 className="heading mb-3">{data.site.siteMetadata.title}</h2>
-              <div className="sub-heading">
-                <p className="mb-5">{data.site.siteMetadata.slogan}</p>
-                <div
-                  className="fb-like"
-                  data-href={data.site.siteMetadata.fbcide}
-                  data-layout="button_count"
-                  data-action="recommend"
-                  data-size="large"
-                  data-show-faces="true"
-                  data-share="true">
-                </div>
+        <header className="masthead">
+          <div className="container h-100">
+            <div className="row h-100 align-items-center justify-content-center text-center">
+              <div className="col-lg-10 align-self-end">
+                <h1 className="text-uppercase text-white font-weight-bold">{data.site.siteMetadata.title}</h1>
+                <hr className="divider my-4" />
+              </div>
+              <div className="col-lg-8 align-self-baseline">
+                <p className="text-white-75 font-weight-light mb-5">{data.site.siteMetadata.slogan}</p>
+                <a className="btn btn-primary header-btn js-scroll-trigger" href="#section-about">
+                  Conócenos
+                </a>
               </div>
             </div>
           </div>
-        </div>
+        </header>
       </section>
       <AboutSection data={data.about}/>
-      <ClientsSection/>
-      <CoparmexSection data={data.coparmex}/>
+      <StrategicAlliesSection {...data.strategic_allies}/>
       <WorkSection data={data.work}/>
       <MethodologiesSection data={data.methodologies}/>
       <ServicesSection data={data.services}/>
@@ -85,7 +82,8 @@ export default () => {
         script={data.send_message_script.edges[0].node.publicURL}/>
       <FooterSection
         companyName={data.site.siteMetadata.title}
-        fbURL={data.site.siteMetadata.fbcide}/>
+        fbURL={data.site.siteMetadata.fbcide}
+        linkedinURL={data.site.siteMetadata.linkedin} />
     </Layout>
   );
 }

@@ -58,7 +58,7 @@ class NavMenu extends React.Component {
             <Scrollspy
               className="ml-auto navbar-nav"
               componentTag="Nav"
-              offset={-50}
+              offset={-60}
               items={itemNames}
               currentClassName="active">
                 {navItems}
