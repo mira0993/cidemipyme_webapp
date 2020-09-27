@@ -21,15 +21,6 @@
   color: #2DC497 !important;
 }
 
-.home-section {
-  background-color: #01142d;
-  background-image: url("../images/cide_fb_7.png");
-  vertical-align: top;
-  height:100%;
-  box-shadow: 2px 2px 2px;
-  opacity: 0.8;
-}
-
 .card-box {
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -346,5 +337,20 @@ hr.divider {
   font-weight: 700;
   border: none;
   border-radius: 8rem;
+}
+
+.service-work-section-unit {
+  padding-right: 4rem !important;
+  padding-left: 2rem !important;
+  margin-bottom: 5rem!important;
+}
+
+.companies-db-link {
+  padding: 0.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6rem;
+  background-color: #bff3e3;
+  color: #fff !important;
 }
 /* --------------- */

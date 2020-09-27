@@ -1,6 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyleSheet, css } from 'aphrodite';
+import { fadeIn } from 'react-animations';
 
+const styles = StyleSheet.create({
+  logoFadeIn: {
+    animationName: fadeIn,
+    animationDuration: '2s',
+  }
+});
 
 class LogoHeader extends React.Component {
   render() {
@@ -8,7 +16,8 @@ class LogoHeader extends React.Component {
       <img
         alt={this.props.altImage}
         src={this.props.imagePath}
-        height={this.props.height}/>
+        height={this.props.height}
+        className={css(styles.logoFadeIn)}/>
     );
   }
 }
