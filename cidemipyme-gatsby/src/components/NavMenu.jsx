@@ -49,22 +49,28 @@ class NavMenu extends React.Component {
 
     return (
 
-        <Navbar fixed="top" color="white" className="navbar-expand-lg card-box">
-          <NavbarBrand href="#" className="mr-auto js-scroll-trigger">{this.props.logo}</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar.bind(this)} className="mr2">
-            <i className="ion-navicon"></i>
-          </NavbarToggler>
-          <Collapse isOpen={this.state.collapsed} navbar>
-            <Scrollspy
-              className="ml-auto navbar-nav"
-              componentTag="Nav"
-              offset={-60}
-              items={itemNames}
-              currentClassName="active">
-                {navItems}
-            </Scrollspy>
-          </Collapse>
-        </Navbar>
+      <Navbar fixed="top" color="white" className="navbar-expand-lg card-box">
+        <NavbarBrand href="#" className="mr-auto js-scroll-trigger">{this.props.logo}</NavbarBrand>
+        <NavbarToggler onClick={this.toggleNavbar.bind(this)} className="mr2">
+          <i className="ion-navicon"></i>
+        </NavbarToggler>
+        <Collapse isOpen={this.state.collapsed} navbar>
+          <Scrollspy
+            className="ml-auto navbar-nav"
+            componentTag="Nav"
+            offset={-60}
+            items={itemNames}
+            currentClassName="active">
+            {navItems}
+          </Scrollspy>
+          <NavItem key="empresas-confiables" className="navbar-nav companies-db-link">
+            <NavLink href="https://www.cidemipymes.com.mx/company/" className="menu-link"
+              onClick={this.toggleNavbar.bind(this)}>
+              <i className="flaticon ion-android-home mr-2"/>Empresas Confiables
+              </NavLink>
+          </NavItem>
+        </Collapse>
+      </Navbar>
     );
   }
 }

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "aphrodite": "^2.4.0",
     "bootstrap": "^4.5.2",
     "gatsby": "^2.24.63",
     "gatsby-link": "^2.4.14",
@@ -13,6 +14,8 @@
     "jquery": "^3.5.1",
     "popper.js": "^1.12.9",
     "react": "^16.13.1",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-scrollspy": "^3.4.3",
