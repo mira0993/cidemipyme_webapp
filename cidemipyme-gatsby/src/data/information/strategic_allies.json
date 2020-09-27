@@ -1,0 +1,22 @@
+{
+  "id": "strategic_allies_section",
+  "title": "Aliados Estratégicos de Tu Empresa",
+  "strategic_allies_items": [
+    {
+      "title": "Compromiso",
+      "icon": "flaticon-001-planning",
+      "text": "En lograr el desarrollo de empresas generando mayor competitividad a través de la intervención de consultoría."
+
+    },
+    {
+      "title": "Diagnósticos",
+      "icon": "flaticon-012-report",
+      "text": "Se han realizado diagnósticos organizacionales en más de 850 empresas de diversos sectores buscando las oportunidades de desarollo."
+    },
+    {
+      "title": "Consultoría",
+      "icon": "flaticon-006-strategy-1",
+      "text": "Se han intervenido con consultoría a 683 empresas, logrando resultados positivos con impacto en ventas, productibilidad o rentabilidad."
+    }
+  ]
+}

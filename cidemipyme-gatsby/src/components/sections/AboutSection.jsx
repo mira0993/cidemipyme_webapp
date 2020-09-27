@@ -8,6 +8,11 @@ import {
   CardText,
   CardDeck
 } from 'reactstrap';
+import {graphql} from 'gatsby';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { fadeIn, headShake } from 'react-animations';
+import { StyleSheet, css } from 'aphrodite';
+
 
 const AboutPropTypes = {
   title: PropTypes.string.isRequired,
@@ -15,6 +20,16 @@ const AboutPropTypes = {
   mision: PropTypes.array.isRequired,
   values: PropTypes.array.isRequired,
 }
+
+const styles = StyleSheet.create({
+  cardSize: {
+    width: '100%',
+    height: '100%',
+  },
+  cardBorder0: {
+    border: '0px',
+  }
+});
 
 class AboutSection extends React.Component {
   renderParagraphs(paragraphs, keyPrefix) {
@@ -25,26 +40,32 @@ class AboutSection extends React.Component {
     )
   }
 
-  createCard(text, iconName, cardKey) {
+  createCard(text, iconName, index) {
     let capitalLetter = text[0];
 
-    return (
-        <Card className="text-center pb_media_v2 card-box" key={cardKey}>
+    return (   
+      <Card className={css(styles.cardBorder0)} key={'values ' + index}>
+        <ScrollAnimation
+          animateIn={'fadeInUp'}
+          delay={(1+index) * 500}
+          className={'text-center card-box  pb_media_v2 ' + css(styles.cardSize)}>
           <div className="icon icon-shine mr-3 display-1 mx-auto mb-4">
-            <i className={'flaticon text-secondary ' + iconName}/>
+            <i className={'flaticon text-secondary ' + iconName} />
           </div>
           <CardText>
             <span className="capital-letter">{capitalLetter}</span>
             {text.slice(1)}
           </CardText>
-        </Card>
+        </ScrollAnimation>
+      </Card>
+        
     );
   }
 
   render() {
     let cards = this.props.data['values'].map(
       (value, index) => {
-        return this.createCard(value['text'], value['icon'], 'values' + index);
+        return this.createCard(value['text'], value['icon'], index);
       }
     )
     return (
@@ -52,25 +73,31 @@ class AboutSection extends React.Component {
         <Container>
           <Row>
             <Col lg={12} md={12} sm={0}>
-              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
-                {this.props.data['title']}
-              </h2>
-              {this.renderParagraphs(this.props.data['intro'], 'intro')}
+              <ScrollAnimation animateIn={'fadeInUp'}>
+                <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
+                  {this.props.data['title']}
+                </h2>
+                {this.renderParagraphs(this.props.data['intro'], 'intro')}
+              </ScrollAnimation>
             </Col>
           </Row>
           <Row>
             <Col lg={12} md={12} sm={0}>
+              <ScrollAnimation animateIn={'fadeInUp'}>
               <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
                 {'Misión'}
               </h2>
               {this.renderParagraphs(this.props.data['mision'], 'mision')}
+              </ScrollAnimation>
             </Col>
           </Row>
           <Row>
             <Col lg={12} md={12} sm={0}>
-              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
-                {'Valores'}
-              </h2>
+              <ScrollAnimation animateIn={'fadeInUp'}>
+                <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
+                  {'Valores'}
+                </h2>
+              </ScrollAnimation>
               <CardDeck>
                 {cards}
               </CardDeck>

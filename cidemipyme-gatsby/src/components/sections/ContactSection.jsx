@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {graphql} from 'gatsby';
 import {
   Button,
   Col,
@@ -20,6 +21,7 @@ const ContactPropTypes = {
   address: PropTypes.arrayOf(PropTypes.string).isRequired,
   map: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
+  whatsapp: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired
 }
 
@@ -184,6 +186,10 @@ class ContactSection extends React.Component {
           <p>{this.props.data.email}</p>
         </li>
         <li>
+          <span className="text-uppercase">WhatsApp</span>
+          <p>{this.props.data.whatsapp}</p>
+        </li>
+        <li>
           <span className="text-uppercase">Teléfono</span>
           <p>{this.props.data.phone}</p>
         </li>
@@ -244,6 +250,7 @@ export const GraphQlContactSectionFragment = graphql `
     address
     phone
     email
+    whatsapp
     map
   }
 `;

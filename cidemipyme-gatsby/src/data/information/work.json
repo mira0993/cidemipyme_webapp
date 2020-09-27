@@ -1,39 +1,120 @@
 {
   "id": "work_section",
-  "title": "¿Qué Hacemos?",
+  "title": "Servicios",
   "work_items": [
     {
-      "icon": "flaticon-020-idea",
-      "items": [
-        "Capacitación a emprendedores",
-        "Puesta en marcha de nuevas empresas",
-        "Gestión de proyectos",
-        "Creación de alianzas productivas"
-      ]
+      "icon": "flaticon-015-strategy",
+      "title": "Consultoría Organizacional",
+      "content": "Gestionamos la competitividad de las empresas.",
+      "image": "cce_logo.png",
+      "slide": {
+        "css_class": "card-services-img-1",
+        "content": [
+          "Estructura organizacional: descripciones de actividades, perfiles de puestos",
+          "Clima laboral",
+          "Evaluación de desempeño",
+          "Sistemas de administración de sueldos y salarios",
+          "Políticas organizacionales (finanzas, ventas, operación)",
+          "Control financiero (presupuestos)",
+          "Plan de negocio, plan de ventas, plan de producción",
+          "Programas de trabajo (operación, producción, logística)",
+          "Costos organizacionales",
+          "Indicadores de productividad",
+          "Planes estratégicos",
+          "BCM",
+          "Mapeo estratégico",
+          "Empresas socialmente responsables",
+          "Planes de inversión",
+          "Aceleración del negocio",
+          "Institucionalización",
+          "Eventos Kaizen",
+          "Calidad en el servicio",
+          "Filosofía de calidad",
+          "Procesos esbeltos",
+          "Mejora continua",
+          "Apoyos en procesos ISO",
+          "Seguridad industrial"
+        ]
+      }
     },
     {
-      "icon": "flaticon-007-startup",
-      "items": [
-        "Diagnóstico Organizacional DO",
-        "Consultoría Empresarial CCE",
-        "Consultoría JICA",
-        "Articulación de Alianzas Productivas"
-      ]
+      "icon": "flaticon-016-speech",
+      "title": "Aprendizaje Empresarial (Capacitación)",
+      "content": "Compartimos conocimiento. Colaborades que aprenden, empresas que crecen.",
+      "image": "",
+      "slide": {
+        "css_class": "card-services-img-5",
+        "content": [
+          "Ventas",
+          "Servicio al cliente",
+          "Dirección estratégica",
+          "Administración de proyectos",
+          "Integración de equipos",
+          "Cambio organizacional",
+          "Sensibilización al cambio",
+          "Administración de RH"
+        ]
+      }
     },
     {
-      "icon": "flaticon-010-website-1",
-      "items": [
-        "Capacitación",
-        "Gestión de Calidad",
-        "Gestión Estratégica"
-      ]
+      "icon": "flaticon-014-policy",
+      "title": "Asesoría Legal Laboral",
+      "content": "Brindamos  tranquilidad legal en el trato con tus colaboradores.",
+      "image": "",
+      "slide": {
+        "css_class": "card-services-img-3",
+        "content": [
+          "Reclutamiento y selección",
+          "Publicación de vacantes",
+          "Búsqueda de talento",
+          "Análisis de currículo",
+          "Entrevistas",
+          "Baterías de psicométricos",
+          "Estudios socioeconómicos",
+          "Asesoría en contratación",
+          "Asesoría en inducción"
+        ]
+      }
     },
     {
-      "icon": "flaticon-023-business",
-      "items": [
-        "Consultoría en Estrategia de Negocio",
-        "Desarrollo de proveedores"
-      ]
+      "icon": "flaticon-021-human-resources",
+      "title": "Atracción de Talento",
+      "content": "Reclutamos y seleccionamos el talento que require tu empresa.",
+      "image": "cide_talento_300.png",
+      "slide": {
+        "css_class": "card-services-img-2",
+        "content": [
+          "Reclutamiento y selección",
+          "Publicación de vacantes",
+          "Búsqueda de talento",
+          "Análisis de currículo",
+          "Entrevistas",
+          "Baterías de psicométricos",
+          "Estudios socioeconómicos",
+          "Asesoría en contratación",
+          "Asesoría en inducción"
+        ]
+      }
+    },
+    {
+      "icon": "flaticon-028-connection",
+      "title": "Gestión de Capital Humano",
+      "content": "Somos tu área de desarrollo y motivacion del capital humano",
+      "image": "",
+      "slide": {
+        "css_class": "card-services-img-4",
+        "content": [
+          "Reclutamiento y selección",
+          "Publicación de vacantes",
+          "Búsqueda de talento",
+          "Análisis de currículo",
+          "Entrevistas",
+          "Baterías de psicométricos",
+          "Estudios socioeconómicos",
+          "Asesoría en contratación",
+          "Asesoría en inducción"
+        ]
+      }
     }
   ]
 }
