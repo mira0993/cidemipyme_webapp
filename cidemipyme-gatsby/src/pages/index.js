@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
 
 export default () => {
   const data = useStaticQuery(homeQuery);
+
   return (
     <Layout>   
       <section

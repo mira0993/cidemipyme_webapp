@@ -36,13 +36,14 @@ const Layout = ({ children }) => {
         }
       }`
   );
+
   return (
     <>
       <NavMenu logo={<LogoHeader
-        altImage={data['site']['siteMetadata']['title']}
+        altImage={data?.site?.siteMetadata?.title}
         imagePath={logo_120} height={'40px'} />
       }
-        items={data['menusJson']['items']} />
+        items={data?.menusJson?.items ?? []} />
       {children}
     </>
   );
