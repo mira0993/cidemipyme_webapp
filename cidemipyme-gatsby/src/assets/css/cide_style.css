@@ -353,4 +353,29 @@ hr.divider {
   background-color: #bff3e3;
   color: #fff !important;
 }
+
+.methodology-card-cce {
+  background: #6ccab9 !important;
+  color: #ffffff !important;
+}
+
+.methodology-card-business {
+  background: #A1B3C9 !important;
+  color: #ffffff !important;
+}
+
+.methodology-card-growth {
+  background: #f1c073 !important;
+  color: #ffffff !important;
+}
+
+.methodology-card-human-capital {
+  background: #c4c6c7 !important;
+  color: #ffffff !important;
+}
+
+.methodology-card-cidetalento {
+  background: #1d3d5d !important;
+  color: #ffffff !important;
+}
 /* --------------- */

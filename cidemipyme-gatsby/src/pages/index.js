@@ -88,7 +88,7 @@ export default () => {
       <AboutSection data={data.about}/>
       <StrategicAlliesSection {...data.strategic_allies}/>
       <WorkSection {...data.work}/>
-      <MethodologiesSection data={data.methodologies}/>
+      <MethodologiesSection {...data.methodologies}/>
       <ClientsSection />
       <ContactSection
         data={data.contact}

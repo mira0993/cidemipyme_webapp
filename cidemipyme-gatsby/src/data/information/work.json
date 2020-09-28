@@ -6,7 +6,7 @@
       "icon": "flaticon-015-strategy",
       "title": "Consultoría Organizacional",
       "content": "Gestionamos la competitividad de las empresas.",
-      "image": "cce_logo.png",
+      "image": "cce",
       "slide": {
         "css_class": "card-services-img-1",
         "content": [
@@ -80,7 +80,7 @@
       "icon": "flaticon-021-human-resources",
       "title": "Atracción de Talento",
       "content": "Reclutamos y seleccionamos el talento que require tu empresa.",
-      "image": "cide_talento_300.png",
+      "image": "cide_talento",
       "slide": {
         "css_class": "card-services-img-2",
         "content": [
