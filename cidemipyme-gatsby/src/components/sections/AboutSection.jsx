@@ -8,9 +8,8 @@ import {
   CardText,
   CardDeck
 } from 'reactstrap';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { StyleSheet, css } from 'aphrodite';
 
 
 const AboutPropTypes = {
@@ -20,20 +19,10 @@ const AboutPropTypes = {
   values: PropTypes.array.isRequired,
 }
 
-const styles = StyleSheet.create({
-  cardSize: {
-    width: '100%',
-    height: '100%',
-  },
-  cardBorder0: {
-    border: '0px',
-  }
-});
-
 class AboutSection extends React.Component {
   renderParagraphs(paragraphs, keyPrefix) {
     return paragraphs.map(
-    (paragraph, index) => {
+      (paragraph, index) => {
         return <p key={keyPrefix + index}>{paragraph}</p>;
       }
     )
@@ -42,22 +31,16 @@ class AboutSection extends React.Component {
   createCard(text, iconName, index) {
     let capitalLetter = text[0];
 
-    return (   
-      <Card className={css(styles.cardBorder0)} key={'values ' + index}>
-        <ScrollAnimation
-          animateIn={'fadeInUp'}
-          delay={(1+index) * 100}
-          className={'text-center card-box  pb_media_v2 ' + css(styles.cardSize)}>
-          <div className="icon icon-shine mr-3 display-1 mx-auto mb-4">
-            <i className={'flaticon text-secondary ' + iconName} />
-          </div>
-          <CardText>
-            <span className="capital-letter">{capitalLetter}</span>
-            {text.slice(1)}
-          </CardText>
-        </ScrollAnimation>
+    return (
+      <Card className="text-center card-box  pb_media_v2" key={'values ' + index}>
+        <div className="icon icon-shine mr-3 display-1 mx-auto mb-4">
+          <i className={'flaticon text-secondary ' + iconName} />
+        </div>
+        <CardText>
+          <span className="capital-letter">{capitalLetter}</span>
+          {text.slice(1)}
+        </CardText>
       </Card>
-        
     );
   }
 
@@ -83,10 +66,10 @@ class AboutSection extends React.Component {
           <Row>
             <Col lg={12} md={12} sm={0}>
               <ScrollAnimation animateIn={'fadeInUp'}>
-              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
-                {'Misión'}
-              </h2>
-              {this.renderParagraphs(this.props.data['mision'], 'mision')}
+                <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
+                  {'Misión'}
+                </h2>
+                {this.renderParagraphs(this.props.data['mision'], 'mision')}
               </ScrollAnimation>
             </Col>
           </Row>
@@ -96,16 +79,16 @@ class AboutSection extends React.Component {
                 <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
                   {'Valores'}
                 </h2>
+                <CardDeck>
+                  {cards}
+                </CardDeck>
               </ScrollAnimation>
-              <CardDeck>
-                {cards}
-              </CardDeck>
             </Col>
           </Row>
         </Container>
       </section>
     );
-   }
+  }
 }
 
 export default AboutSection;
@@ -114,7 +97,7 @@ AboutSection.propTypes = {
   data: PropTypes.shape(AboutPropTypes).isRequired
 }
 
-export const GraphQlAboutSectionFragment = graphql `
+export const GraphQlAboutSectionFragment = graphql`
   fragment AboutSectionFragment on InformationJson {
     title
     intro
