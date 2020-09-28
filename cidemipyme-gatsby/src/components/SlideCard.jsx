@@ -4,27 +4,36 @@ import { Row, Col, Collapse, Button } from 'reactstrap';
 
 const slideCardPrefix = 'slide_card_';
 
-const SlideCard = (props) => {
-  const { content, icon, title, cssClassImage, keyPrefix } = props;
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-
-  const contentParagraphs1 = content.slice(0, 8).map((text, index) => {
+const SlideCardContent = (props) => {
+  const { keyPrefix, sections } = props;
+  const content = sections.map((section, sectionIndex) => {
     return (
-      <div key={`${keyPrefix}1${slideCardPrefix}${index}`}>
-        <p>{text}</p>
+      <div key={`${keyPrefix}${slideCardPrefix}${sectionIndex}`}>
+        {section && <p className="pb_font-18">{section.title}</p>}
+        {
+          section.items.map((item, itemIndex) =>
+            <p
+              className="text-secondary pb_font-15"
+              key={`${keyPrefix}1${slideCardPrefix}${sectionIndex}${itemIndex}`}>
+              {item}
+            </p>
+          )
+        }
       </div>
     );
   });
+  return <>{content}</>;
+}
 
-  const contentParagraphs2 = content.length <= 8 ? null :
-    content.slice(8).map((text, index) => {
-      return (
-        <div key={`${keyPrefix}2${slideCardPrefix}${index}`}>
-          <p>{text}</p>
-        </div>
-      );
-    });
+const SlideCard = (props) => {
+  const { visible, collapsed, icon, title, cssClassImage, keyPrefix } = props;
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+
+  const visibleContent = <SlideCardContent sections={visible} keyPrefix={`${keyPrefix}1`} />
+  const collapsedContent = collapsed != null
+    ? <SlideCardContent sections={collapsed} keyPrefix={`${keyPrefix}2`} />
+    : null;
 
   return (
     <div>
@@ -35,11 +44,11 @@ const SlideCard = (props) => {
             <i className={`flaticon icon-primary-color ${icon}`} />
           </div>
           <h3 className="font-weight-normal mt-0 mb-4">{title}</h3>
-          {contentParagraphs1}
-          {contentParagraphs2 != null &&
+          {visibleContent}
+          {collapsedContent != null &&
             <>
               <Collapse isOpen={isOpen}>
-                {contentParagraphs2}
+                {collapsedContent}
               </Collapse>
               <Button
                 color="primary"

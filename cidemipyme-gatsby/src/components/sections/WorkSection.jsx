@@ -89,7 +89,8 @@ const WorkSection = (props) => {
         cssClassImage={service.slide.css_class}
         icon={service.icon}
         title={service.title}
-        content={service.slide.content}
+        visible={service.slide.visible}
+        collapsed={service.slide.collapsed}
         key={`${serviceSlideKeyPrefix}${index}_`}
         keyPrefix={`${serviceSlideKeyPrefix}${index}_`} />
     ));
@@ -144,7 +145,14 @@ export const GraphQlWorkSectionFragment = graphql`
       image
       slide {
         css_class
-        content
+        visible {
+          title
+          items
+        }
+        collapsed {
+          title
+          items
+        }
       }
     }
   }
