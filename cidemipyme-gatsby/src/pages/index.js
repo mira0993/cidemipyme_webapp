@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import { StyleSheet, css } from 'aphrodite';
-import { fadeIn, headShake } from 'react-animations';
+import { fadeIn, pulse } from 'react-animations';
 
 import AboutSection from 'sections/AboutSection.jsx';
 import StrategicAlliesSection from 'sections/StrategicAlliesSection.jsx';
@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     animationName: fadeIn,
     animationDuration: '4s',
   },
-  learnMoreBtnHeadShake: {
-    animationName: headShake,
+  learnMoreBtnPulse: {
+    animationName: pulse,
     animationDuration: '2s',
     animationDelay: '5s',
     animationIterationCount: 10
@@ -77,7 +77,7 @@ export default () => {
               </div>
               <div className="col-lg-8 align-self-baseline">
                 <p className="text-white-75 font-weight-light mb-5">{data.site.siteMetadata.slogan}</p>
-                <a className={'btn btn-primary header-btn js-scroll-trigger ' + css(styles.learnMoreBtnHeadShake)}  href="#section-about">
+                <a className={'btn btn-primary header-btn js-scroll-trigger ' + css(styles.learnMoreBtnPulse)}  href="#section-about">
                   Conócenos
                 </a>
               </div>

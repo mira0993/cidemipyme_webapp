@@ -8,6 +8,7 @@ import {
 import Slider from "react-slick";
 import SlideCard from 'components/SlideCard.jsx';
 import Scrollspy from 'react-scrollspy';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 const workKeyPrefix = 'workSection_';
@@ -23,27 +24,29 @@ const ServiceWithIconItem = (props) => {
   } = props;
   return (
     <Col lg={{ size: 4, offset }} className="service-work-section-unit">
-      <Row>
-        <div className="d-flex mr-3 display-4 icon-primary-color strategy-icon">
-          <i className={`flaticon ${icon}`} />
-        </div>
-      </Row>
-      <Row>
-        <div className="media-body text-center">
-          <h3 className="mt-0 pb_font-22">
-            {title}
-          </h3>
-          <p className="pb_font-15 mb-0">
-            {content}
-          </p>
-          <Scrollspy 
-            items={['slider-services']}
-            className="pl-0 ml-0 pb_font-15"
-            offset={100}>
-            <a href="#slider-services" onClick={onSelect}>Ver Más</a>
-          </Scrollspy>
-        </div>
-      </Row>
+      <ScrollAnimation animateIn={'zoomIn'}>
+        <Row>
+          <div className="d-flex mr-3 display-4 icon-primary-color strategy-icon">
+            <i className={`flaticon ${icon}`} />
+          </div>
+        </Row>
+        <Row>
+          <div className="media-body text-center">
+            <h3 className="mt-0 pb_font-22">
+              {title}
+            </h3>
+            <p className="pb_font-15 mb-0">
+              {content}
+            </p>
+            <Scrollspy
+              items={['see-more-services']}
+              className="pl-0 ml-0 pb_font-15"
+              offset={-60}>
+              <a href="#see-more-services" onClick={onSelect}>Ver Más</a>
+            </Scrollspy>
+          </div>
+        </Row>
+      </ScrollAnimation>
     </Col>
   );
 }
@@ -97,38 +100,38 @@ const WorkSection = (props) => {
 
   return (
     <>
-    <section id="section-work" className="pb_section">
-      <Container>
-        <Row>
-          <Col sm={10}>
-            <h2 className="mt-0 heading-border-top mb-3 font-weight-normal section-header">
-              {title}
-            </h2>
-          </Col>
-        </Row>
-        <Row>
-          {cardsFirstRow}
-        </Row>
-        <Row>
-          {cardsSecondRow}
-        </Row>
-      </Container>
-    </section>
-    <section className="pb_section bg-light">
-      <Container>
-      <Row>
-      <div id="slider-services" />
-      <Col lg={12} md={12} sm={0}>
-        <Slider
-          ref={sliderRef} {...sliderSettings}
-          className="single-item pb_slide_v2">
-          {slides}
-        </Slider>
-      </Col>
-    </Row>
-      </Container>
-    
-    </section>
+      <section id="section-work" className="pb_section">
+        <Container>
+          <Row>
+            <Col sm={10}>
+              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal section-header">
+                {title}
+              </h2>
+            </Col>
+          </Row>
+          <Row>
+            {cardsFirstRow}
+          </Row>
+          <Row>
+            {cardsSecondRow}
+          </Row>
+        </Container>
+      </section>
+      <section className="pb_section bg-light">
+        <Container>
+          <Row id="see-more-services">
+            <Col lg={12} md={12} sm={0}>
+              <ScrollAnimation animateIn={'fadeIn'}>
+                <Slider
+                  ref={sliderRef} {...sliderSettings}
+                  className="single-item pb_slide_v2">
+                  {slides}
+                </Slider>
+              </ScrollAnimation>
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </>
   );
 }

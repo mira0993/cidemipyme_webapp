@@ -10,7 +10,6 @@ import {
 } from 'reactstrap';
 import {graphql} from 'gatsby';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { fadeIn, headShake } from 'react-animations';
 import { StyleSheet, css } from 'aphrodite';
 
 
@@ -47,7 +46,7 @@ class AboutSection extends React.Component {
       <Card className={css(styles.cardBorder0)} key={'values ' + index}>
         <ScrollAnimation
           animateIn={'fadeInUp'}
-          delay={(1+index) * 500}
+          delay={(1+index) * 100}
           className={'text-center card-box  pb_media_v2 ' + css(styles.cardSize)}>
           <div className="icon icon-shine mr-3 display-1 mx-auto mb-4">
             <i className={'flaticon text-secondary ' + iconName} />

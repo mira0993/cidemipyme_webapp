@@ -11,6 +11,7 @@ import {
 } from 'reactstrap';
 import cide_talento from 'images/cide_talento_300.png';
 import cce_logo from 'images/cce_logo.png';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const methodologiesKeyPrefix = 'methodologiesSection_';
 const methodologiesImages = {
@@ -83,13 +84,15 @@ const MethodologiesSection = (props) => {
             </h2>
           </Col>
         </Row>
-        <CardColumns>
-          <CardWithImage {...methodologies.cce} className="methodology-card-cce" />
-          <CardWithIcon {...methodologies.business_architecture} className="methodology-card-business" />
-          <CardWithIcon {...methodologies.growth_strategy} className="methodology-card-growth" />
-          <CardWithImage {...methodologies.cidetalento} className="methodology-card-cidetalento" />
-          <CardWithIcon {...methodologies.human_capital} className="methodology-card-human-capital" />
-        </CardColumns>
+        <ScrollAnimation animateIn={'zoomIn'}>
+          <CardColumns>
+            <CardWithImage {...methodologies.cce} className="methodology-card-cce" />
+            <CardWithIcon {...methodologies.business_architecture} className="methodology-card-business" />
+            <CardWithIcon {...methodologies.growth_strategy} className="methodology-card-growth" />
+            <CardWithImage {...methodologies.cidetalento} className="methodology-card-cidetalento" />
+            <CardWithIcon {...methodologies.human_capital} className="methodology-card-human-capital" />
+          </CardColumns>
+        </ScrollAnimation>
       </Container>
     </section>
   );
