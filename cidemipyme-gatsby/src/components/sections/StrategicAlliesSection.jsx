@@ -5,32 +5,41 @@ import {
   Container,
   Row,
 } from 'reactstrap';
+import ScrollAnimation from 'react-animate-on-scroll';
 
-const coparmexKeyPrefix = 'coparmexSection_';
+const strategicAlliesKeyPrefix = 'strategicAllies_';
 
 const StrategicAlliesSection = (props) => {
-  const {title, strategic_allies_items: strategicAlliesItems } = props;
-  const createItemCard = (title, icon, text, key) => (
-    <Col lg={4} key={key} className="pr-5 pl-5">
-      <Row>
-        <div className="d-flex mr-3 display-4 icon-primary-color strategy-icon">
-          <i className={`flaticon ${icon}`} />
-        </div>
-      </Row>
-      <Row>
-        <div className="media-body text-center">
-          <h3 className="mt-0 pb_font-22">
-            {title}
-          </h3>
-          <p className="pb_font-15">
-            {text}
-          </p>
-        </div>
-      </Row>
+  const { title, strategic_allies_items: strategicAlliesItems } = props;
+  const createItemCard = (title, icon, text, index) => (
+    <Col lg={4} key={`${strategicAlliesKeyPrefix}card_${index}`} className="pr-5 pl-5">
+      <ScrollAnimation animateIn={'bounceInUp'} delay={(1 + index) * 100}>
+        <Row>
+          <div className="d-flex mr-3 display-4 icon-primary-color strategy-icon">
+            <i className={`flaticon ${icon}`} />
+          </div>
+        </Row>
+        <Row>
+          <div className="media-body text-center">
+            <h3 className="mt-0 pb_font-22">
+              {title}
+            </h3>
+            <p className="pb_font-15">
+              {text}
+            </p>
+          </div>
+        </Row>
+      </ScrollAnimation>
     </Col>
   );
-  const cards = strategicAlliesItems.map((item, index) => createItemCard(item.title, item.icon, item.text, `${coparmexKeyPrefix}card_${index}`)
-  );
+
+  const cards = strategicAlliesItems.map(
+    (item, index) => createItemCard(
+      item.title,
+      item.icon,
+      item.text,
+      index
+    ));
 
   return (
     <section id="section-strategic-allies" className="pb_section bg-light">

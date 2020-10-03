@@ -1,102 +1,135 @@
-import HoverCard from 'components/HoverCard.jsx';
-import methodology_business_architecture from 'images/metodologia_arquitectura_negocio.png';
-import methodology_cce from 'images/metodologia_cce.png';
-import methodology_cidetalento from 'images/metodologia_cidetalento.png';
-import methodology_growth_strategy from 'images/metodologia_estrategia_crecimiento.png';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { graphql } from 'gatsby';
 import {
   Col,
   Container,
   Row,
+  Card,
+  CardTitle,
+  CardColumns,
+  CardText,
 } from 'reactstrap';
+import cide_talento from 'images/cide_talento_300.png';
+import cce_logo from 'images/cce_logo.png';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const methodologiesKeyPrefix = 'methodologiesSection_';
 const methodologiesImages = {
-  cce: methodology_cce,
-  business_architecture: methodology_business_architecture,
-  growth_strategy: methodology_growth_strategy,
-  cidetalento: methodology_cidetalento,
+  cce: cce_logo,
+  cidetalento: cide_talento,
+};
+
+const methodologiesIcons = {
+  cce: 'flaticon-032-growth',
+  business_architecture: 'flaticon-027-creative',
+  growth_strategy: 'flaticon-010-website-1',
+  cidetalento: 'flaticon-028-connection',
+  human_capital: 'flaticon-005-target',
 };
 
 
-const MethodologyItemPropType = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  content: PropTypes.arrayOf(PropTypes.string).isRequired
-}
-
-const MethodologiesPropTypes = {
-  title: PropTypes.string.isRequired,
-  methodologies: PropTypes.arrayOf(PropTypes.shape(MethodologyItemPropType)).isRequired,
-}
-
-class MethodologiesSection extends React.Component {
-  renderContent(content, keyPrefix) {
-    return content.map((text, index) => (
-      <div key={`${keyPrefix}${index}`}>
-        <p>{text}</p>
+const CardWithImage = (props) => {
+  const { title, content, id, className } = props;
+  return (
+    <Card className={`text-center card-box  pb_media_v2 ${className}`}>
+      <div className="icon  mr-3 display-1 mx-auto mb-4">
+        <img src={methodologiesImages[id]} width={80} />
       </div>
-    ));
-  }
 
-  render() {
-    let cards = [];
-    let totalCards = this.props.data.methodologies.length;
-    let key = `${methodologiesKeyPrefix}card_`;
+      <CardTitle className="pl-1 pr-1 pb_font-20">{title}</CardTitle>
+      <CardText className="pl-2 pr-2 pb_font-15">
+        {
+          content.map(text =>
+            <p key={`${methodologiesKeyPrefix}card_${id}_p`}>
+              {text}
+            </p>
+          )
+        }
+      </CardText>
+    </Card>
+  );
+}
 
-    for(let i=0; i < totalCards; i+=2) {
-      cards.push(
-        <Row className="row-padding-top-30" key={`${key}${i / 2}`}>
-          <Col md={6}>
-            <HoverCard
-              title={this.props.data.methodologies[i].title}
-              text={this.props.data.methodologies[i].content}
-              image={methodologiesImages[this.props.data.methodologies[i].id]}
-              keyPrefix={`${key}${i}`}/>
-          </Col>
-          <Col md={6}>
-            <HoverCard
-              title={this.props.data.methodologies[i + 1].title}
-              text={this.props.data.methodologies[i + 1].content}
-              image={methodologiesImages[this.props.data.methodologies[i + 1].id]}
-              keyPrefix={`${key}${i + 1}`}/>
+const CardWithIcon = (props) => {
+  const { title, content, id, className } = props;
+  return (
+    <Card className={`text-center card-box  pb_media_v2 ${className}`}>
+      <div className="icon  mr-3 display-1 mx-auto mb-4">
+        <i className={`flaticon ${methodologiesIcons[id]}`} />
+      </div>
+      <CardTitle className="pl-1 pr-1 pb_font-20">{title}</CardTitle>
+      <CardText className="pl-2 pr-2 pb_font-15">
+        {
+          content.map(text =>
+            <p key={`${methodologiesKeyPrefix}card_${id}_p`}>
+              {text}
+            </p>
+          )
+        }
+      </CardText>
+    </Card>
+  );
+}
+
+const MethodologiesSection = (props) => {
+  const { title, methodologies } = props;
+  console.log(methodologies);
+  return (
+    <section id="section-methodologies" className="pb_section">
+      <Container>
+        <Row>
+          <Col md={12}>
+            <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
+              {title}
+            </h2>
           </Col>
         </Row>
-      );
-    }
-
-    return (
-      <section id="section-methodologies" className="pb_section">
-        <Container>
-          <Row>
-            <Col md={12}>
-              <h2 className="mt-0 heading-border-top mb-3 font-weight-normal">
-                {this.props.data.title}
-              </h2>
-            </Col>
-          </Row>
-          {cards}
-        </Container>
-      </section>
-    );
-  }
+        <ScrollAnimation animateIn={'zoomIn'}>
+          <CardColumns>
+            <CardWithImage {...methodologies.cce} className="methodology-card-cce" />
+            <CardWithIcon {...methodologies.business_architecture} className="methodology-card-business" />
+            <CardWithIcon {...methodologies.growth_strategy} className="methodology-card-growth" />
+            <CardWithImage {...methodologies.cidetalento} className="methodology-card-cidetalento" />
+            <CardWithIcon {...methodologies.human_capital} className="methodology-card-human-capital" />
+          </CardColumns>
+        </ScrollAnimation>
+      </Container>
+    </section>
+  );
 }
 
 export default MethodologiesSection;
 
-MethodologiesSection.propTypes = {
-  data: PropTypes.shape(MethodologiesPropTypes).isRequired
-};
 
-export const GraphQlMethodologiesSectionFragment = graphql `
+export const GraphQlMethodologiesSectionFragment = graphql`
   fragment MethodologiesSectionFragment on InformationJson {
     title
     methodologies {
-      id
-      title
-      content
+      cce {
+        id
+        title
+        content
+      }
+      business_architecture {
+        id
+        title
+        content
+      }
+      cidetalento {
+        id
+        title
+        content
+      }
+      growth_strategy {
+        id
+        title
+        content
+      }
+      human_capital {
+        id
+        title
+        content
+      }
     }
   }
 `;

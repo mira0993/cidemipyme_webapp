@@ -6,34 +6,63 @@
       "icon": "flaticon-015-strategy",
       "title": "Consultoría Organizacional",
       "content": "Gestionamos la competitividad de las empresas.",
-      "image": "cce_logo.png",
+      "image": "cce",
       "slide": {
         "css_class": "card-services-img-1",
-        "content": [
-          "Estructura organizacional: descripciones de actividades, perfiles de puestos",
-          "Clima laboral",
-          "Evaluación de desempeño",
-          "Sistemas de administración de sueldos y salarios",
-          "Políticas organizacionales (finanzas, ventas, operación)",
-          "Control financiero (presupuestos)",
-          "Plan de negocio, plan de ventas, plan de producción",
-          "Programas de trabajo (operación, producción, logística)",
-          "Costos organizacionales",
-          "Indicadores de productividad",
-          "Planes estratégicos",
-          "BCM",
-          "Mapeo estratégico",
-          "Empresas socialmente responsables",
-          "Planes de inversión",
-          "Aceleración del negocio",
-          "Institucionalización",
-          "Eventos Kaizen",
-          "Calidad en el servicio",
-          "Filosofía de calidad",
-          "Procesos esbeltos",
-          "Mejora continua",
-          "Apoyos en procesos ISO",
-          "Seguridad industrial"
+        "visible": [
+          {
+            "title": "Gestión Organizacional",
+            "items": [
+              "Organigrama",
+              "Descriptivo de puestos",
+              "Políticas de operación",
+              "Controles"
+            ]
+          },
+          {
+            "title": "Gestión Financiera",
+            "items": [
+              "Estrategia fianciera",
+              "Presupuesto",
+              "Análisis financiero"
+            ]
+          }
+        ],
+        "collapsed": [
+          {
+            "title": "Gestión de Negocio",
+            "items": [
+              "Plan de negocio",
+              "Generación del modelo de negocio"
+            ]
+          },
+          {
+            "title": "Desarrollo de Mercado",
+            "items": [
+              "Plan de ventas",
+              "Estrategias de comercialización",
+              "Estrategia de producto",
+              "Servicio al cliente"
+            ]
+          },
+          {
+            "title": "Gestión de Calidad",
+            "items": [
+              "Círculos de calidad",
+              "Alineación de procesos",
+              "Gestión de procesos esbeltos",
+              "Gestión de indicadores"
+            ]
+          },
+          {
+            "title": "Gestión Estratégica",
+            "items": [
+              "Planeacion estratégica",
+              "Aceleración del negocio",
+              "Gestión de dirección",
+              "Institucionalización de la empresa"
+            ]
+          }
         ]
       }
     },
@@ -44,15 +73,58 @@
       "image": "",
       "slide": {
         "css_class": "card-services-img-5",
-        "content": [
-          "Ventas",
-          "Servicio al cliente",
-          "Dirección estratégica",
-          "Administración de proyectos",
-          "Integración de equipos",
-          "Cambio organizacional",
-          "Sensibilización al cambio",
-          "Administración de RH"
+        "visible": [
+          {
+            "title": "Dirigida a Dueños y Directores",
+            "items": [
+              "Crecimiento empresarial",
+              "Ser director",
+              "Director líder",
+              "Director estratega",
+              "Exigir para motivar",
+              "PNL para directores"
+            ]
+          },
+          {
+            "title": "Gerentes y Supervisores",
+            "items": [
+              "Supervisión efectiva",
+              "Mapa estratégico"
+            ]
+          }
+        ],
+        "collapsed": [
+          {
+            "items": [
+              "Construcción de indicadores",
+              "Manejo de conflictos"
+            ]
+          },
+          {
+            "title": "Calidad",
+            "items": [
+              "Programa 5S",
+              "Manufactura esbelta",
+              "Mapeo de valor (VSM)"
+            ]
+          },
+          {
+            "title": "Ventas",
+            "items": [
+              "Diplomado ventas exitosas",
+              "Servicio al cliente",
+              "Cierre de ventas"
+            ]
+          },
+          {
+            "title": "Otros cursos",
+            "items": [
+              "Gestión de proyectos",
+              "Finanzas (interprestación de informes financieros)",
+              "Plan de negocios",
+              "Arquitectura de negocios"
+            ]
+          }
         ]
       }
     },
@@ -63,16 +135,16 @@
       "image": "",
       "slide": {
         "css_class": "card-services-img-3",
-        "content": [
-          "Reclutamiento y selección",
-          "Publicación de vacantes",
-          "Búsqueda de talento",
-          "Análisis de currículo",
-          "Entrevistas",
-          "Baterías de psicométricos",
-          "Estudios socioeconómicos",
-          "Asesoría en contratación",
-          "Asesoría en inducción"
+        "visible": [
+          {
+            "items": [
+              "Asesoría laboral a las áreas RRHH",
+              "Contratos laborales",
+              "Documentación laboral",
+              "Actas administrativas",
+              "Renuncias"
+            ]
+          }
         ]
       }
     },
@@ -80,19 +152,20 @@
       "icon": "flaticon-021-human-resources",
       "title": "Atracción de Talento",
       "content": "Reclutamos y seleccionamos el talento que require tu empresa.",
-      "image": "cide_talento_300.png",
+      "image": "cide_talento",
       "slide": {
         "css_class": "card-services-img-2",
-        "content": [
-          "Reclutamiento y selección",
-          "Publicación de vacantes",
-          "Búsqueda de talento",
-          "Análisis de currículo",
-          "Entrevistas",
-          "Baterías de psicométricos",
-          "Estudios socioeconómicos",
-          "Asesoría en contratación",
-          "Asesoría en inducción"
+        "visible": [
+          {
+            "title": "Candiatos de Nivel Ejecutivo",
+            "items": [
+              "Reclutamiento",
+              "Selección por el método de competencias",
+              "Batería de psicométricos",
+              "Investigación de candidatos",
+              "Asesoría en inducción de personal"
+            ]
+          }
         ]
       }
     },
@@ -103,16 +176,27 @@
       "image": "",
       "slide": {
         "css_class": "card-services-img-4",
-        "content": [
-          "Reclutamiento y selección",
-          "Publicación de vacantes",
-          "Búsqueda de talento",
-          "Análisis de currículo",
-          "Entrevistas",
-          "Baterías de psicométricos",
-          "Estudios socioeconómicos",
-          "Asesoría en contratación",
-          "Asesoría en inducción"
+        "visible": [
+          {
+            "items": [
+              "Evaluación de desempeño",
+              "Evaluación de liderazgo 360",
+              "Valuación de puestos por puntos",
+              "Descriptivos de puestos",
+              "Tabuladores de sueldos",
+              "Programas de capacitación"
+            ]
+          }
+        ],
+        "collapsed": [
+          {
+            "items": [
+              "Planes de desarrollo personal",
+              "Diagnóstico de detección de necesidades de capacitación",
+              "Clima laboral",
+              "Diagnósticos psicosociales"
+            ]
+          }
         ]
       }
     }

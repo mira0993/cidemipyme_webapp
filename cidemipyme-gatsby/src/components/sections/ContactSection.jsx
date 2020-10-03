@@ -51,6 +51,7 @@ class ContactSection extends React.Component {
   }
 
   onSubmitMessage(event) {
+    event.preventDefault();
     if (this.state.emailText.length === 0
       || this.state.subjectText.length === 0
       || this.state.messageText.length === 0
@@ -165,6 +166,7 @@ class ContactSection extends React.Component {
           outline
           color="info"
           className="pb_font-13 pb_letter-spacing-2 p-3 rounded-0 contact-button"
+          type="submit"
           onClick={this.onSubmitMessage.bind(this)}>
           Enviar
         </Button>

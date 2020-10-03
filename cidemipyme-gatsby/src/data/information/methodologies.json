@@ -1,38 +1,44 @@
 {
   "id": "methodologies_section",
   "title": "Metodologías CIDEMiPyMe",
-  "methodologies": [
-    {
+  "methodologies": {
+    "cce": {
       "id": "cce",
       "title": "Círculo de Crecimiento Empresarial",
       "content": [
-        "Metodología de consultoría creada por CIDEMIPYME.",
-        "Tiene como objetivo romper los paradigmas que detienen el crecimiento de las empresas."
+        "Metodología de consultoría creada por CIDEMIPYME. ",
+        "Rompemos los paradigmas que detienen el crecimiento de las empresas."
       ]
     },
-    {
+    "cidetalento": {
       "id": "cidetalento",
       "title": "CIDEtalento",
       "content": [
-        "Se enfoca en la búsqueda de personas talentosas que aporten sus conocimientos y destrezas para alcanzar en forma significativa los objetivos de las empresas.",
-        "Se efectúan procesos cuidadosamente planeados que permiten realizar las mejores prácticas en la búsqueda de talento."
+        "Se enfoca en la búsqueda de personas talentosas que aporten sus conocimientos y destrezas para alcanzar en forma significativa los objetivos de las empresas. "
       ]
     },
-    {
+    "business_architecture": {
       "id": "business_architecture",
       "title": "Arquitectura de Negocio",
       "content": [
-        "Tiene como objetivo apoyar a empresas que tienen no más de cinco años de haber iniciado actividades y no cuentan con sistemas organizacionales.",
-        "Esta metodología se imparte a nivel grupal y proporciona las herramientas necesarios para dejar un negocio con una administración básica."
+        "Apoyamos a empresas que tienen no más de cinco años de haber iniciado actividades y no cuentan con sistemas organizacionales. ",
+        "Esta metodología proporciona las herramientas necesarios para dejar un negocio con una administración básica."
       ]
     },
-    {
+    "growth_strategy": {
       "id": "growth_strategy",
       "title": "Estrategia de Crecimiento",
       "content": [
-        "Tiene como objetivo implementar, en forma sencilla, estrategias que desarrollen la calidad y crecimiento de la empresa.",
+        "Implementamos, en forma sencilla, estrategias que desarrollen la calidad y crecimiento de la empresa. ",
         "Esta metodología es aplicada a empresas que se encuentran en pleno desarrollo y que buscan áreas de oportunidad para acelerar su crecimiento."
       ]
+    },
+    "human_capital": {
+      "id": "human_capital",
+      "title": "Gestión de Capital Humano",
+      "content": [
+        "Nos volvemos tu área de RR.HH. con el objetivo de generar un ambiente de desarrollo, a través de la aplicación de técnicas y métodos de administración del capital humano."
+      ]
     }
-  ]
+  }
 }

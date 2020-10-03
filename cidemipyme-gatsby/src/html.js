@@ -3,26 +3,8 @@ import favicon from 'images/logo_favicon_32.png';
 import preview from 'images/page_preview.png';
 
 
-let stylesStr
-if (process.env.NODE_ENV === `production`) {
-  try {
-    stylesStr = require(`!raw-loader!../public/styles.css`)
-  } catch (e) {
-    console.log(e)
-  }
-}
-
 class HTML extends React.Component {
   render() {
-    let css
-    if (process.env.NODE_ENV === `production`) {
-      css = (
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
-        />
-      )
-    }
     return (
       <html {...this.props.htmlAttributes}>
         <head>
@@ -56,7 +38,6 @@ class HTML extends React.Component {
           <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
           {this.props.headComponents}
-          {css}
         </head>
         <body {...this.props.bodyAttributes}>
           <div id="fb-root"></div>
