@@ -15,7 +15,7 @@ class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <meta property="og:title" content="CIDEMiPyMe" />
-          <meta property="og:description" content="Hacemos negocio su negocio" />
+          <meta property="og:description" content="Hacemos Negocio Tu Negocio" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="http://cidemipyme1.s3-website-us-west-2.amazonaws.com/" />
           <meta property="og:image" content={preview} />

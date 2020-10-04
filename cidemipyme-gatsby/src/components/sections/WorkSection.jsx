@@ -86,6 +86,7 @@ const WorkSection = (props) => {
     prevArrow: <SlickArrow side="left" />,
     beforeChange: (_current, next) => setSliderIndex(next)
   };
+  
   const slides = services.map(
     (service, index) => (
       <SlideCard
