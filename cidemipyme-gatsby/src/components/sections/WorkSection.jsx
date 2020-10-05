@@ -42,7 +42,18 @@ const ServiceWithIconItem = (props) => {
               items={['see-more-services']}
               className="pl-0 ml-0 pb_font-15"
               offset={-60}>
-              <a href="#see-more-services" onClick={onSelect}>Ver Más</a>
+              <a href="#see-more-services" onClick={
+                () => {
+                  const target = $('[id=see-more-services]');
+                  onSelect();
+                  if (target.length) {
+                    $('html, body').animate({
+                      scrollTop: (target.offset().top - 60)
+                    }, 1000, "easeInOutExpo");
+                    return false;
+                  }
+                }
+              }>Ver Más</a>
             </Scrollspy>
           </div>
         </Row>
@@ -86,6 +97,7 @@ const WorkSection = (props) => {
     prevArrow: <SlickArrow side="left" />,
     beforeChange: (_current, next) => setSliderIndex(next)
   };
+  
   const slides = services.map(
     (service, index) => (
       <SlideCard

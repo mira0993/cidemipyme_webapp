@@ -15,11 +15,32 @@ class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <meta property="og:title" content="CIDEMiPyMe" />
-          <meta property="og:description" content="Hacemos negocio su negocio" />
+          <meta property="og:description" content="Hacemos Negocio Tu Negocio" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="http://cidemipyme1.s3-website-us-west-2.amazonaws.com/" />
           <meta property="og:image" content={preview} />
           <link rel="icon" href={favicon} />
+          {/* Facebook Pixel */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              !function(f,b,e,v,n,t,s)
+              {
+              if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)
+              }(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '655670392037302');
+              fbq('track', 'PageView');
+              `}}
+          />
+          <noscript><img height="1" width="1" style={{display:'none'}}
+            src="https://www.facebook.com/tr?id=655670392037302&ev=PageView&noscript=1"
+          /></noscript>
           {/* Bootstrap core JS */}
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>

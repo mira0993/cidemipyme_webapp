@@ -37,15 +37,15 @@ const CardWithImage = (props) => {
       </div>
 
       <CardTitle className="pl-1 pr-1 pb_font-20">{title}</CardTitle>
-      <CardText className="pl-2 pr-2 pb_font-15">
+      <div className="pl-3 pr-3 pb_font-15">
         {
-          content.map(text =>
-            <p key={`${methodologiesKeyPrefix}card_${id}_p`}>
+          content.map((text, paragraphIndex) =>
+            <p key={`${methodologiesKeyPrefix}card_${id}_p${paragraphIndex}`}>
               {text}
             </p>
           )
         }
-      </CardText>
+      </div>
     </Card>
   );
 }
@@ -58,22 +58,21 @@ const CardWithIcon = (props) => {
         <i className={`flaticon ${methodologiesIcons[id]}`} />
       </div>
       <CardTitle className="pl-1 pr-1 pb_font-20">{title}</CardTitle>
-      <CardText className="pl-2 pr-2 pb_font-15">
+      <div className="pl-3 pr-3 pb_font-15">
         {
-          content.map(text =>
-            <p key={`${methodologiesKeyPrefix}card_${id}_p`}>
+          content.map((text, paragraphIndex) =>
+            <p key={`${methodologiesKeyPrefix}card_${id}_p${paragraphIndex}`}>
               {text}
             </p>
           )
         }
-      </CardText>
+      </div>
     </Card>
   );
 }
 
 const MethodologiesSection = (props) => {
   const { title, methodologies } = props;
-  console.log(methodologies);
   return (
     <section id="section-methodologies" className="pb_section">
       <Container>

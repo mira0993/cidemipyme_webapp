@@ -37,13 +37,6 @@ const homeQuery = graphql`
     contact: informationJson(id:{eq:"contact_section"}) {
       ...ContactSectionFragment
     }
-    send_message_script: allFile(filter: { name: { eq: "send_email" } }) {
-      edges {
-        node {
-          publicURL
-        }
-      }
-    }
   }
 `;
 
@@ -74,14 +67,12 @@ export default () => {
         </header>
         </ScrollAnimation>
       </section>
-      <AboutSection data={data.about}/>
+      <AboutSection {...data.about}/>
       <StrategicAlliesSection {...data.strategic_allies}/>
       <WorkSection {...data.work}/>
       <MethodologiesSection {...data.methodologies}/>
       <ClientsSection />
-      <ContactSection
-        data={data.contact}
-        script={data.send_message_script.edges[0].node.publicURL}/>
+      <ContactSection {...data.contact}/>
       <FooterSection
         companyName={data.site.siteMetadata.title}
         fbURL={data.site.siteMetadata.fbcide}
