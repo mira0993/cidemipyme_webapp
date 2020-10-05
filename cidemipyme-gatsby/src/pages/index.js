@@ -67,7 +67,7 @@ export default () => {
         </header>
         </ScrollAnimation>
       </section>
-      <AboutSection data={data.about}/>
+      <AboutSection {...data.about}/>
       <StrategicAlliesSection {...data.strategic_allies}/>
       <WorkSection {...data.work}/>
       <MethodologiesSection {...data.methodologies}/>
