@@ -1,7 +1,7 @@
 {
   "id": "contact_section",
   "title": "Contáctanos",
-  "url": "https://www.cidemipymes.com.mx/v1/contact-us",
+  "url": "https://anrem118bi.execute-api.us-west-2.amazonaws.com/v1/contact-us",
   "address": [
     "La Cauda 939 Col. Jardínes del Bosque",
     "Guadalajara, Jalisco, México"
