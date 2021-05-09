@@ -25,22 +25,21 @@ class HTML extends React.Component {
             dangerouslySetInnerHTML={{
               __html: `
               !function(f,b,e,v,n,t,s)
-              {
-              if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};
               if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
               n.queue=[];t=b.createElement(e);t.async=!0;
               t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)
-              }(window, document,'script',
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '655670392037302');
+              fbq('init', '5357168747689989');
               fbq('track', 'PageView');
               `}}
           />
-          <noscript><img height="1" width="1" style={{display:'none'}}
-            src="https://www.facebook.com/tr?id=655670392037302&ev=PageView&noscript=1"
-          /></noscript>
+          <noscript>
+            <img height="1" width="1" style={{display:'none'}}
+              src="https://www.facebook.com/tr?id=5357168747689989&ev=PageView&noscript=1"/>
+          </noscript>
           {/* Bootstrap core JS */}
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
